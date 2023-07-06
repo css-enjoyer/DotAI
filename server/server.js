@@ -1,6 +1,8 @@
+// import env variables
+require("dotenv").config();
 // import express and create app
 const express = require("express");
-const app = express();
+const app = express()
 
 // create routing
 app.get('/', (req, res) => {
@@ -8,4 +10,4 @@ app.get('/', (req, res) => {
 });
 
 // start server
-app.listen(4000);
+app.listen(process.env.PORT);
