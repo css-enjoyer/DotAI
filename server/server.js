@@ -23,13 +23,14 @@ app.get('/', (req, res) => {
 });
 app.get("/heroes", async (req, res) => {
     try {
-        const heroes = await Hero.find();
+        const heroes = await Hero.find({}, { name: 1, categories: 1, _id: 0 }); // Projection to include only name and categories fields
         res.json(heroes);
     } catch (error) {
         console.error("Error retrieving heroes:", error);
         res.status(500).json({ error: "Something went wrong" });
     }
-}); 
+});
+
 
 // start server
 app.listen(process.env.PORT);

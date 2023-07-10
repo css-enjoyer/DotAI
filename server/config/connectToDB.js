@@ -16,8 +16,8 @@ async function connectToDB() {
         console.log("Connected to MongoDB");
     
         // Create hero models after successful database connection
-        // await createHeroModels();
-        // categorizeHeroes();
+        await createHeroModels();
+        categorizeHeroes();
         // uncategorizeHeroes("Anti-Mage");
     } catch (err) {
         console.error("Error connecting to MongoDB:", err);
