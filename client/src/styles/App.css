@@ -124,7 +124,6 @@ button {
   background-color: transparent;
   color: var(--white);
   border: none;
-  z-index: 999;
 }
 .App #main .start-draft {
   width: 50%;

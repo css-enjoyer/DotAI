@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-// import HeroSelect from './components/HeroSelect';
+import HeroSelect from './components/HeroSelect';
 import Categories from './components/Categories';
 
 import './styles/App.css';
 
 function App() {
-	const [startDraft, setStartDraft] = useState(false);
-	const handleDraftClick = () => { setStartDraft((prevState) => !prevState); };
+	const [showHeroes, setShowHeroes] = useState(true);
+	const handleContinue = () => {
+		setShowHeroes(prevShowHeroes => !prevShowHeroes);
+	};
 
   	return (
     	<div className="App">
@@ -21,11 +23,8 @@ function App() {
 				</ul>
 			</div>
 			<div id="main">
-			{!startDraft ? (
-				<button className="start-draft" onClick={handleDraftClick}>Start Draft!</button>
-			) : (
-				<Categories handleDraftClick={handleDraftClick}/>
-			)}
+				<Categories handleContinue={handleContinue}/>
+				{showHeroes && <HeroSelect />}
 			</div>
     	</div>
   	);
