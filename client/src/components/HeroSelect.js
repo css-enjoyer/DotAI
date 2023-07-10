@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
 
-function HeroSelect({onBgClick, onHeroSelect}) {
+function HeroSelect({handleContinue}) {
 	const [heroes, setHeroes] = useState([]);
 	useEffect(() => {
 		fetch('https://api.opendota.com/api/heroStats')
@@ -20,12 +20,12 @@ function HeroSelect({onBgClick, onHeroSelect}) {
 	};
 
   	return (
-    	<div className="HeroSelect" onClick={onBgClick}>
-			<h2 className="header">Select a Hero</h2>
+    	<div className="HeroSelect" onClick={handleContinue}>
+			<h2 className="header">Heroes</h2>
             <div id="hero-list">
 
 				{heroes.map(hero => (
-				<Hero image={getHeroImageURL(hero.img)} name={hero.localized_name} key={hero.id} onSelect={onHeroSelect}/>
+				<Hero image={getHeroImageURL(hero.img)} name={hero.localized_name} key={hero.id}/>
 				))}
 
             </div>

@@ -5,7 +5,7 @@ import Categories from './components/Categories';
 import './styles/App.css';
 
 function App() {
-	const [showHeroes, setShowHeroes] = useState(true);
+	const [showHeroes, setShowHeroes] = useState(false);
 	const handleContinue = () => {
 		setShowHeroes(prevShowHeroes => !prevShowHeroes);
 	};
@@ -24,7 +24,7 @@ function App() {
 			</div>
 			<div id="main">
 				<Categories handleContinue={handleContinue}/>
-				{showHeroes && <HeroSelect />}
+				{showHeroes && <HeroSelect handleContinue={handleContinue}/>}
 			</div>
     	</div>
   	);
