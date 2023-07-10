@@ -33,6 +33,7 @@
 //     "Ranged",
 //     "Melee",
 //     "Wave Clear",
+//     "Mobile",
 //     "Sustain",
 //     "Anti Mana",
 //     "Anti Push",
