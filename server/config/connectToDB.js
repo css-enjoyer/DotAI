@@ -1,19 +1,28 @@
+// connectToDB.js is a function that connects to the mongoDB using the mongoose library
+
 // import env variables
 if(process.env.NODE_ENV != 'production') { 
     require("dotenv").config(); 
 }
-
 // import mongoose
 const mongoose = require("mongoose");
+const {Hero, createHeroModels} = require("../models/hero");
+const categorizeHeroes = require("../config/categorizeHeroes");
+const uncategorizeHeroes = require("../config/uncategorizeHeroes");
 
-// connect to db function
 async function connectToDB() {
     try {
         await mongoose.connect(process.env.DB_URL);
         console.log("Connected to MongoDB");
-    } catch(err) {
-        console.log(err);
+    
+        // Create hero models after successful database connection
+        // await createHeroModels();
+        // categorizeHeroes();
+        // uncategorizeHeroes("Anti-Mage");
+    } catch (err) {
+        console.error("Error connecting to MongoDB:", err);
     }
 }
+  
 
 module.exports = connectToDB;
