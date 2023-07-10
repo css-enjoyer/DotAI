@@ -9,6 +9,7 @@ const mongoose = require("mongoose");
 const {Hero, createHeroModels} = require("../models/hero");
 const categorizeHeroes = require("../config/categorizeHeroes");
 const uncategorizeHeroes = require("../config/uncategorizeHeroes");
+const removeDuplicates = require("../models/removeDuplicates");
 
 async function connectToDB() {
     try {
@@ -16,9 +17,10 @@ async function connectToDB() {
         console.log("Connected to MongoDB");
     
         // Create hero models after successful database connection
+        removeDuplicates();
+        uncategorizeHeroes();
         await createHeroModels();
         categorizeHeroes();
-        // uncategorizeHeroes("Anti-Mage");
     } catch (err) {
         console.error("Error connecting to MongoDB:", err);
     }

@@ -1,27 +1,19 @@
 const { Hero } = require("../models/hero");
 
-// Removes duplicates for heroes
-async function uncategorizeHeroes(heroName) {
-    try {
-        // Retrieve the hero by name
-        const hero = await Hero.findOne({ name: heroName });
-        if (!hero) {
-            throw new Error("Hero not found");
-        }
+// Remove all categories for all heroes
+async function uncategorizeHeroesHeroes() {
+  try {
+    const heroes = await Hero.find();
 
-        // Get the unique categories for the hero
-        const uniqueCategories = [...new Set(hero.categories)];
-
-        // Update the hero's categories with the unique categories
-        hero.categories = uniqueCategories;
-
-        // Save the updated hero model to the database
-        await hero.save();
-
-        console.log(`Duplicate categories removed for hero "${heroName}"`);
-    } catch (error) {
-        console.error("Error removing duplicate categories:", error);
+    for (const hero of heroes) {
+      hero.categories = [];
+      await hero.save();
     }
+
+    console.log("All categories removed for all heroes");
+  } catch (error) {
+    console.error("Error removing categories for all heroes:", error);
+  }
 }
 
-module.exports = uncategorizeHeroes;
+module.exports = uncategorizeHeroesHeroes;
