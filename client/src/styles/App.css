@@ -83,7 +83,6 @@ button {
 }
 .App #side-bar div p {
   font-size: 0.85rem;
-  text-align: justify;
   position: absolute;
   top: 0;
   color: transparent;
@@ -186,6 +185,7 @@ button {
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(49, 56, 60, 0) 77%, rgba(96, 109, 117, 0) 100%);
 }
 .App #category-bar {
+  padding-left: 12px;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5.7px);
@@ -199,6 +199,7 @@ button {
   height: 85%;
   padding: 15px 0;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -217,6 +218,7 @@ button {
   letter-spacing: 2px;
   width: 300px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .App #category-bar .categories div li {
   cursor: pointer;
@@ -224,6 +226,10 @@ button {
   text-align: center;
   list-style-type: none;
   transition: 0.1s ease-in-out;
+}
+.App #category-bar .categories div li:hover {
+  transform: scale(1.4);
+  color: white;
 }
 .App #category-bar .categories div .selected {
   background-color: rgba(255, 255, 255, 0.05);

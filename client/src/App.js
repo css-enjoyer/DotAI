@@ -11,7 +11,7 @@ function App() {
 			<div id="side-bar">
 				<div>
 					<h1 className="header title">DotAI: Dota Drafter</h1>
-					<p>Good drafting is vital for team success, forming a strong composition that synergizes well together. DotAI enhances your drafting process by offering an intuitive tool to effortlessly filter heroes based on your enemies' strengths and weaknesses.</p>
+					<p>Good drafting is vital for team success, forming a strong composition that synergizes well together. DotAI is an intuitive tool that effortlessly filter heroes based on your enemies' strengths and weaknesses.</p>
 				</div>
 				<ul id="nav">
 					<li><button className="nav-button">Drafting</button></li>
