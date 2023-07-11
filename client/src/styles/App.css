@@ -10,16 +10,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+  color: var(--white);
 }
 
 html, body, #root, .App {
   height: 100%;
+  overflow-y: hidden;
 }
 
 .header {
   font-family: "Kanit", sans-serif;
   line-height: 30px;
-  color: var(--white);
   text-align: center;
 }
 
@@ -31,10 +33,32 @@ button {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 10000px;
+  }
+}
 .App {
-  background: rgb(24, 29, 35);
-  background: linear-gradient(48deg, rgb(24, 29, 35) 0%, rgb(96, 109, 117) 100%);
+  background: linear-gradient(to right, #626C75 0%, #181D23 25%, #626C75 50%, #181D23 75%, #626C75 100%);
+  background-size: 10000px 100%;
+  animation: bg 25s linear infinite;
   display: flex;
+  overflow-y: hidden;
 }
 .App #side-bar {
   width: 20%;
@@ -45,13 +69,11 @@ button {
   align-items: center;
   gap: 30px;
   position: relative;
-  color: var(--white);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5.7px);
           backdrop-filter: blur(5.7px);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
-  transition: 0.3s ease-in-out;
 }
 .App #side-bar div {
   cursor: pointer;
@@ -59,17 +81,14 @@ button {
   width: 90%;
   top: 20px;
 }
-.App #side-bar div h1 {
-  transition: 0.3s ease-in-out;
-}
 .App #side-bar div p {
-  transition: 0.3s ease-in-out;
   font-size: 0.85rem;
   text-align: justify;
   position: absolute;
   top: 0;
   color: transparent;
   transform: translateY(50px);
+  z-index: -1;
 }
 .App #side-bar div:hover h1 {
   color: transparent;
@@ -85,51 +104,117 @@ button {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+}
+.App #side-bar #nav li {
+  width: 100%;
 }
 .App #side-bar #nav .nav-button {
   font-size: 1.2rem;
   font-weight: 500;
   background-color: transparent;
   border: none;
-  color: var(--white);
   text-align: center;
+  width: 100%;
+}
+.App #side-bar #nav .nav-button:hover {
+  color: white;
 }
 .App #main {
   height: 100%;
   width: 100%;
-  padding: 30px;
   display: grid;
   place-items: center;
 }
-.App #main .categories {
+.App #main .HeroSelect {
+  width: 100%;
   height: 100%;
+  padding: 20px 50px;
   overflow-y: scroll;
+}
+.App #main .HeroSelect h2 {
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+.App #main .HeroSelect #hero-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 12px;
+}
+.App #main .HeroSelect #hero-list .Hero {
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 3px 4px black;
+}
+.App #main .HeroSelect #hero-list .Hero img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+.App #main .HeroSelect #hero-list .Hero p {
+  position: absolute;
+  font-size: 100%;
+  bottom: 0;
+  opacity: 0%;
+  line-height: 15px;
+  transform: translateX(100%);
+}
+.App #main .HeroSelect #hero-list .Hero:hover {
+  box-shadow: 0px 8px 8px black;
+  z-index: 998;
+  transform: scale(1.5);
+}
+.App #main .HeroSelect #hero-list .Hero:hover img {
+  filter: brightness(120%);
+  transform: scale(1);
+}
+.App #main .HeroSelect #hero-list .Hero:hover p {
+  transform: translateX(0);
+  opacity: 100%;
+  z-index: 999;
+}
+.App #main .HeroSelect #hero-list .Hero:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(49, 56, 60, 0) 77%, rgba(96, 109, 117, 0) 100%);
+}
+.App #category-bar {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5.7px);
+          backdrop-filter: blur(5.7px);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+.App #category-bar .categories {
+  height: 85%;
+  padding: 15px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  color: var(--white);
-  list-style-type: none;
-  position: relative;
+  gap: 5px;
+  font-size: 1.3rem;
+  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
+          mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
 }
-.App #main .categories::-webkit-scrollbar {
-  width: 6px;
-}
-.App #main .categories::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-.App #main .categories::-webkit-scrollbar-thumb {
-  background-color: var(--red);
-}
-.App #main .categories p {
+.App #category-bar .categories p {
   font-size: 1.8rem;
   letter-spacing: 2px;
   width: 300px;
   text-align: center;
   position: relative;
 }
-.App #main .categories p::after {
+.App #category-bar .categories p::after {
   content: "";
   position: absolute;
   background-color: white;
@@ -138,70 +223,24 @@ button {
   width: 100%;
   height: 2px;
 }
-.App #main .categories li {
+.App #category-bar .categories li {
   cursor: pointer;
   width: 100%;
   text-align: center;
   border-radius: 8px;
   transition: 0.1s ease-in-out;
 }
-.App #main .categories .selected {
+.App #category-bar .categories .selected {
   background-color: rgba(255, 255, 255, 0.05);
   font-weight: 500;
 }
-.App #main .categories .close-button {
+.App #category-bar .categories .close-button {
   position: absolute;
   right: 0;
   font-size: 2rem;
   background-color: transparent;
-  color: var(--white);
   border: none;
   z-index: 10;
-}
-.App .HeroSelect {
-  color: var(--white);
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  padding: 20px 50px;
-  overflow-y: scroll;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
-}
-.App .HeroSelect h2 {
-  margin-bottom: 20px;
-  letter-spacing: 5px;
-}
-.App .HeroSelect #hero-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  grid-gap: 12px;
-}
-.App .HeroSelect #hero-list .Hero {
-  text-shadow: 0 3px 4px black;
-  font-size: 0.83rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.App .HeroSelect #hero-list .Hero img {
-  height: 50px;
-  width: auto;
-  box-shadow: 0 3px 4px black;
-  filter: brightness(85%);
-  transition: 0.1s ease-in-out;
-  cursor: pointer;
-}
-.App .HeroSelect #hero-list .Hero:hover img {
-  filter: brightness(120%);
-  transform: translateY(-2px) scale(1.1);
-}
-.App .HeroSelect #hero-list .Hero:hover p {
-  font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {

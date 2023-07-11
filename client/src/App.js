@@ -25,8 +25,10 @@ function App() {
 				</ul>
 			</div>
 			<div id="main">
+				<HeroSelect handleContinue={handleContinue}/>
+			</div>
+			<div id="category-bar">
 				<Categories handleContinue={handleContinue}/>
-				{showHeroes && <HeroSelect handleContinue={handleContinue}/>}
 			</div>
     	</div>
   	);
