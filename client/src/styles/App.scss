@@ -26,17 +26,23 @@ button {
     cursor: pointer;
 }
 .App {
-    background-color: var(--black);
+    background: rgb(24,29,35);
+    background: linear-gradient(48deg, rgba(24,29,35,1) 0%, rgba(96,109,117,1) 100%);
     display: flex;
     #side-bar {
-        width: 25%;
+        width: 20%;
         padding: 60px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        
         color: var(--white);
-        background-color: var(--red);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.7px);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+
         transition: 0.3s ease-in-out;
         div {
             cursor: pointer;
