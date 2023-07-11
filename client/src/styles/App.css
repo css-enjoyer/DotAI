@@ -36,7 +36,7 @@ button {
   display: flex;
 }
 .App #side-bar {
-  width: 40%;
+  width: 25%;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -44,10 +44,35 @@ button {
   gap: 30px;
   color: var(--white);
   background-color: var(--red);
+  transition: 0.3s ease-in-out;
 }
-.App #side-bar p {
+.App #side-bar div {
+  cursor: pointer;
+}
+.App #side-bar div h1 {
+  transition: left 0.3s ease-in-out;
+  position: relative;
+  left: 0;
+}
+.App #side-bar div p {
+  transition: left 0.3s ease-in-out;
   font-size: 0.85rem;
   text-align: justify;
+  color: transparent;
+  position: absolute;
+  z-index: -1;
+  left: -1000px;
+}
+.App #side-bar div:hover h1 {
+  color: transparent;
+  position: absolute;
+  left: -1000px;
+}
+.App #side-bar div:hover p {
+  color: var(--white);
+  position: relative;
+  z-index: 0;
+  left: 0;
 }
 .App #side-bar #nav {
   list-style-type: none;

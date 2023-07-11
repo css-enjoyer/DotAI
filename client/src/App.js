@@ -13,8 +13,10 @@ function App() {
   	return (
     	<div className="App">
 			<div id="side-bar">
-				<h1 className="header title">DotAI: Dota Drafter</h1>
-				<p>DotAI is a drafting tool for Dota 2 that assists you in selecting the optimal heroes for your team. It offers a variety of categories to choose from, allowing you to make informed decisions based on specific hero attributes and roles.</p>
+				<div>
+					<h1 className="header title">DotAI: Dota Drafter</h1>
+					<p>DotAI is a drafting tool for Dota 2 that assists you in selecting the optimal heroes for your team. It offers a variety of categories to choose from, allowing you to make informed decisions based on specific hero attributes and roles.</p>
+				</div>
 				<ul id="nav">
 					<li><button className="nav-button">Drafting</button></li>
 					<li><button className="nav-button">Tutorial</button></li>
