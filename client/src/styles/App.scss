@@ -34,9 +34,11 @@ button {
         padding: 60px 20px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 30px;
-        
+        position: relative;
+
         color: var(--white);
         background: rgba(255, 255, 255, 0.05);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -46,30 +48,29 @@ button {
         transition: 0.3s ease-in-out;
         div {
             cursor: pointer;
+            position: absolute;
+            width: 90%;
+            top: 20px;
             h1 {
-                transition: left 0.3s ease-in-out;
-                position: relative;
-                left: 0;
+                transition: 0.3s ease-in-out;
             }
             p { 
-                transition: left 0.3s ease-in-out;
-                font-size: .85rem; text-align: justify; 
-                color: transparent;
+                transition: 0.3s ease-in-out;
+                font-size: .85rem; 
+                text-align: justify; 
                 position: absolute;
-                z-index: -1;
-                left: -1000px;
+                top: 0;
+                color: transparent;
+                transform: translateY(50px);
             }
             &:hover {
                 h1 {
                     color: transparent;
-                    position: absolute;
-                    left: -1000px;
+                    transform: translateY(-50px);
                 }
                 p {
-                    color: var(--white);
-                    position: relative;
-                    z-index: 0;
-                    left: 0;
+                    color: var(--white);   
+                    transform: translateY(0);
                 }
             }
         }
