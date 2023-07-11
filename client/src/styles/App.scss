@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Rubik:wght@300;400;500&display=swap');
 :root {
     --black: rgb(17, 16, 16);
-    --red: rgb(137, 0, 0);
-    --yellow: rgb(223, 223, 76);
     --white: rgb(211, 211, 211);
 }
 * {
@@ -124,7 +122,7 @@ $bgWidth: 10000px;
                 .Hero {
                     display: flex;
                     overflow: hidden;
-                    box-shadow: 0 3px 4px black;
+                    box-shadow: 0 0 4px black;
                     img {
                         height: auto;
                         width: 100%;
@@ -167,7 +165,6 @@ $bgWidth: 10000px;
             }
         }
     }
-
     #category-bar {
         padding-left: 12px;
         background: rgba(255, 255, 255, 0.05);
