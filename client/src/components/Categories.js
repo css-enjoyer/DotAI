@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-function Categories({ handleContinue }) {
+function Categories() {
     const [selectedCategories, setSelectedCategories] = useState([]);
 
     const handleCategoryClick = (category) => {
@@ -22,16 +22,17 @@ function Categories({ handleContinue }) {
 
   return (
     <ul className="categories">
-        <button onClick={handleContinue} className="close-button"><AiOutlineArrowRight/></button>
         {categoryList.map((section) => (
             <React.Fragment key={section.title}>
-            <p>{section.title}</p>
-            {section.categories.map((category) => (
-            <li key={category} className={selectedCategories.includes(category) ? 'selected' : ''}
-            onClick={() => handleCategoryClick(category)}>
-                {category}
-            </li>
-            ))}
+            <div>
+                <p>{section.title}</p>
+                {section.categories.map((category) => (
+                <li key={category} className={selectedCategories.includes(category) ? 'selected' : ''}
+                onClick={() => handleCategoryClick(category)}>
+                    {category}
+                </li>
+                ))}
+            </div>
             </React.Fragment>
         ))}
     </ul>

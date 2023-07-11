@@ -5,10 +5,6 @@ import Categories from './components/Categories';
 import './styles/App.css';
 
 function App() {
-	const [showHeroes, setShowHeroes] = useState(false);
-	const handleContinue = () => {
-		setShowHeroes(prevShowHeroes => !prevShowHeroes);
-	};
 
   	return (
     	<div className="App">
@@ -25,10 +21,10 @@ function App() {
 				</ul>
 			</div>
 			<div id="main">
-				<HeroSelect handleContinue={handleContinue}/>
+				<HeroSelect/>
 			</div>
 			<div id="category-bar">
-				<Categories handleContinue={handleContinue}/>
+				<Categories/>
 			</div>
     	</div>
   	);

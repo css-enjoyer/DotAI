@@ -199,48 +199,35 @@ button {
   height: 85%;
   padding: 15px 0;
   overflow-y: scroll;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 30px;
   font-size: 1.3rem;
   -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
           mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
 }
-.App #category-bar .categories p {
-  font-size: 1.8rem;
+.App #category-bar .categories div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.App #category-bar .categories div p {
+  font-size: 2.2rem;
   letter-spacing: 2px;
   width: 300px;
   text-align: center;
-  position: relative;
 }
-.App #category-bar .categories p::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-.App #category-bar .categories li {
+.App #category-bar .categories div li {
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   text-align: center;
-  border-radius: 8px;
+  list-style-type: none;
   transition: 0.1s ease-in-out;
 }
-.App #category-bar .categories .selected {
+.App #category-bar .categories div .selected {
   background-color: rgba(255, 255, 255, 0.05);
   font-weight: 500;
-}
-.App #category-bar .categories .close-button {
-  position: absolute;
-  right: 0;
-  font-size: 2rem;
-  background-color: transparent;
-  border: none;
-  z-index: 10;
 }
 
 @media only screen and (max-width: 768px) {

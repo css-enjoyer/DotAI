@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
 
-function HeroSelect({handleContinue}) {
+function HeroSelect() {
 	const [heroes, setHeroes] = useState([]);
 	useEffect(() => {
 		fetch('https://api.opendota.com/api/heroStats')
 			.then(response => response.json())
 			.then(data => { 
 				setHeroes(data);
-				// console.log(data); 
 		})
 		.catch(error => {
 		  	console.error(error);
@@ -20,7 +19,7 @@ function HeroSelect({handleContinue}) {
 	};
 
   	return (
-    	<div className="HeroSelect" onClick={handleContinue}>
+    	<div className="HeroSelect">
 			<h2 className="header">Heroes</h2>
             <div id="hero-list">
 
