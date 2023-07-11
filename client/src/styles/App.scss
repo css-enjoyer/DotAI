@@ -70,6 +70,7 @@ button {
         #nav {
             list-style-type: none;
             display: flex;
+            align-items: center;
             flex-direction: column;
             gap: 20px;
             .nav-button {
@@ -78,6 +79,7 @@ button {
                 background-color: transparent;
                 border: none;
                 color: var(--white);
+                text-align: center;
             }
         }
     }

@@ -77,6 +77,7 @@ button {
 .App #side-bar #nav {
   list-style-type: none;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
 }
@@ -86,6 +87,7 @@ button {
   background-color: transparent;
   border: none;
   color: var(--white);
+  text-align: center;
 }
 .App #main {
   height: 100%;
