@@ -240,17 +240,24 @@ button {
     flex-direction: column;
   }
   .App #side-bar {
+    display: flex;
     height: 100px;
     width: 100%;
-    padding: 20px;
-    gap: 10px;
+    padding: 10px 30px;
+    gap: 5px;
   }
-  .App #side-bar h1 {
-    font-size: 1.5rem;
+  .App #side-bar div {
+    height: 100%;
+    width: 100%;
+    font-size: 0.8rem;
+    position: relative;
+    top: 0;
   }
-  .App #side-bar p {
-    font-weight: 300;
-    display: none;
+  .App #side-bar div p {
+    font-size: 0.8rem;
+    line-height: 12px;
+    text-align: center;
+    margin-bottom: 2px;
   }
   .App #side-bar #nav {
     flex-direction: row;

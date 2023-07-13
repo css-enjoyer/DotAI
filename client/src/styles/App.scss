@@ -34,6 +34,11 @@ $bgWidth: 10000px;
     0% { background-position-x: 0; }
     100% { background-position-x: $bgWidth; }
 }
+
+
+
+
+
 .App {
     // background: linear-gradient(to right, #626C75 0%,#181D23 25%,#13171a 50%,#181D23 75%,#626C75 100%); 
     background: linear-gradient(90deg, rgba(30,48,65,1) 0%, rgba(66,38,0,1) 24%, rgba(57,2,2,1) 51%, rgba(72,75,92,1) 74%, rgba(30,48,65,1) 100%);
@@ -62,7 +67,6 @@ $bgWidth: 10000px;
             top: 20px;
             p { 
                 font-size: .85rem; 
-                // text-align: justify; 
                 position: absolute;
                 top: 0;
                 color: transparent;
@@ -228,16 +232,24 @@ $bgWidth: 10000px;
         display: flex;
         flex-direction: column;
         #side-bar {
+            display: flex;
             height: 100px;
             width: 100%;
-            padding: 20px;
-            gap: 10px; 
-            h1 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-weight: 300;
-                display: none;
+            padding: 10px 30px;
+            // border: 1px solid red;
+            gap: 5px;
+            div {
+                height: 100%;
+                width: 100%;
+                font-size: .8rem;
+                position: relative;
+                top: 0;
+                p { 
+                    font-size: .8rem; 
+                    line-height: 12px; 
+                    text-align: center;
+                    margin-bottom: 2px;
+                }
             }
             #nav {
                 flex-direction: row;
