@@ -20,7 +20,6 @@ function HeroSelect() {
 
   	return (
     	<div className="HeroSelect">
-			<h2 className="header">Heroes</h2>
             <div id="hero-list">
 
 				{heroes.map(hero => (
