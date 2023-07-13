@@ -40,12 +40,14 @@ $bgWidth: 10000px;
 
 
 .App {
+    background-color: darkred;
     // background: linear-gradient(to right, #626C75 0%,#181D23 25%,#13171a 50%,#181D23 75%,#626C75 100%); 
-    background: linear-gradient(90deg, rgba(30,48,65,1) 0%, rgba(66,38,0,1) 24%, rgba(57,2,2,1) 51%, rgba(72,75,92,1) 74%, rgba(30,48,65,1) 100%);
-    background-size: $bgWidth 100%;
-    animation: bg 25s linear infinite ;
+    // background: linear-gradient(90deg, rgba(30,48,65,1) 0%, rgba(66,38,0,1) 24%, rgba(57,2,2,1) 51%, rgba(72,75,92,1) 74%, rgba(30,48,65,1) 100%);
+    // background-size: $bgWidth 100%;
+    // animation: bg 25s linear infinite ;
     display: flex;
     overflow-y: hidden;
+    border: 1px solid blue;
     #side-bar {
         width: 20%;
         padding: 60px 20px;
@@ -115,10 +117,6 @@ $bgWidth: 10000px;
             height: 100%;
             padding: 20px 50px;
             overflow-y: scroll;
-            h2 {
-                margin-bottom: 20px;
-                letter-spacing: 5px;
-            }
             #hero-list {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -203,7 +201,7 @@ $bgWidth: 10000px;
                 p {
                     font-size: 2.2rem;
                     letter-spacing: 2px;
-                    width: 300px;
+                    width: 100%;
                     text-align: center;
                     background-color: rgba(white, 0.1);
                 }
@@ -228,12 +226,16 @@ $bgWidth: 10000px;
 }
 
 @media only screen and (max-width: 768px) {
+    ::-webkit-scrollbar { width: 5px; }
     .App {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-areas: "nav nav"
+                             "hero categories";
+        grid-template-rows: 70px 100%;
+        grid-template-columns: 60% 40%;
+        border: 1px solid red;
         #side-bar {
-            display: flex;
-            height: 100px;
+            grid-area: nav;
             width: 100%;
             padding: 10px 30px;
             gap: 5px;
@@ -250,12 +252,39 @@ $bgWidth: 10000px;
                     margin-bottom: 2px;
                 }
             }
-            #nav {
-                flex-direction: row;
-            }
+            #nav { flex-direction: row; }
         }
         #main {
-            height: calc(100% - 100px);
+            grid-area: hero;
+            .HeroSelect { padding: 5px;}
+            #hero-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
+                grid-gap: 6px !important;
+            }
+        }
+        #category-bar {
+            grid-area: categories;
+            width: 100%;
+            padding: 0;
+            background: none;
+            box-shadow: none;
+            backdrop-filter: blur(0);
+            // border: 1px solid red;
+            .categories {
+                height: 100%;
+                padding: 0;
+                border: 1px solid blue;
+                // mask: unset;
+                div {
+                    p {
+                        font-size: 1.3em;
+                    }
+                    li {
+                        // font-size: 1em;
+                    }
+                }
+            }
         }
     }
 }

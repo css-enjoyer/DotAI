@@ -52,11 +52,10 @@ button {
   }
 }
 .App {
-  background: linear-gradient(90deg, rgb(30, 48, 65) 0%, rgb(66, 38, 0) 24%, rgb(57, 2, 2) 51%, rgb(72, 75, 92) 74%, rgb(30, 48, 65) 100%);
-  background-size: 10000px 100%;
-  animation: bg 25s linear infinite;
+  background-color: darkred;
   display: flex;
   overflow-y: hidden;
+  border: 1px solid blue;
 }
 .App #side-bar {
   width: 20%;
@@ -128,10 +127,6 @@ button {
   height: 100%;
   padding: 20px 50px;
   overflow-y: scroll;
-}
-.App #main .HeroSelect h2 {
-  margin-bottom: 20px;
-  letter-spacing: 5px;
 }
 .App #main .HeroSelect #hero-list {
   display: grid;
@@ -214,7 +209,7 @@ button {
 .App #category-bar .categories div p {
   font-size: 2.2rem;
   letter-spacing: 2px;
-  width: 300px;
+  width: 100%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -235,13 +230,18 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
   .App {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "nav nav" "hero categories";
+    grid-template-rows: 70px 100%;
+    grid-template-columns: 60% 40%;
+    border: 1px solid red;
   }
   .App #side-bar {
-    display: flex;
-    height: 100px;
+    grid-area: nav;
     width: 100%;
     padding: 10px 30px;
     gap: 5px;
@@ -263,6 +263,31 @@ button {
     flex-direction: row;
   }
   .App #main {
-    height: calc(100% - 100px);
+    grid-area: hero;
+  }
+  .App #main .HeroSelect {
+    padding: 5px;
+  }
+  .App #main #hero-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
+    grid-gap: 6px !important;
+  }
+  .App #category-bar {
+    grid-area: categories;
+    width: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+  .App #category-bar .categories {
+    height: 100%;
+    padding: 0;
+    border: 1px solid blue;
+  }
+  .App #category-bar .categories div p {
+    font-size: 1.3em;
   }
 }/*# sourceMappingURL=App.css.map */
