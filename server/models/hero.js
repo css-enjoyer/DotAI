@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 // Define the hero schema
 const heroSchema = new mongoose.Schema({
 	name: { type: String, required: true },
+	image: { type: String }, 
 	categories: [{ type: String }],
 });
 
