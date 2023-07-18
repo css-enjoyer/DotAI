@@ -126,6 +126,7 @@ $bgWidth: 10000px;
                     overflow: hidden;
                     box-shadow: 0 0 4px black;
                     max-width: 130px;
+                    transition: 0.3s ease-in-out;
                     img {
                         height: auto;
                         width: 100%;
@@ -286,4 +287,11 @@ $bgWidth: 10000px;
             }
         }
     }
+}
+
+.invisible {
+    opacity: 100%;
+    max-width: 0% !important;
+    transform: scale(0%);
+    transform-origin: 0% 0%;
 }

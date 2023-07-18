@@ -140,6 +140,7 @@ button {
   overflow: hidden;
   box-shadow: 0 0 4px black;
   max-width: 130px;
+  transition: 0.3s ease-in-out;
 }
 .App #main .HeroSelect #hero-list .Hero img {
   height: auto;
@@ -293,4 +294,10 @@ button {
   .App #category-bar .categories div p {
     font-size: 1.3em;
   }
+}
+.invisible {
+  opacity: 100%;
+  max-width: 0% !important;
+  transform: scale(0%);
+  transform-origin: 0% 0%;
 }/*# sourceMappingURL=App.css.map */
