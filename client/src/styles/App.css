@@ -199,7 +199,7 @@ button {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 45px;
   font-size: 1.3rem;
   -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
           mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
@@ -208,7 +208,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
 }
 .App #category-bar .categories div p {
   font-size: 2.2rem;
@@ -240,9 +240,8 @@ button {
   .App {
     display: grid;
     grid-template-areas: "nav nav" "hero categories";
-    grid-template-rows: 70px 100%;
-    grid-template-columns: 60% 40%;
-    border: 1px solid red;
+    grid-template-rows: 70px calc(100% - 70px);
+    grid-template-columns: 70% 30%;
   }
   .App #side-bar {
     grid-area: nav;
@@ -270,17 +269,18 @@ button {
     grid-area: hero;
   }
   .App #main .HeroSelect {
-    padding: 5px;
+    padding: 15px;
   }
-  .App #main #hero-list {
+  .App #main .HeroSelect #hero-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
     grid-gap: 6px !important;
   }
   .App #category-bar {
     grid-area: categories;
     width: 100%;
-    padding: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
     background: none;
     box-shadow: none;
     -webkit-backdrop-filter: blur(0);
@@ -288,8 +288,10 @@ button {
   }
   .App #category-bar .categories {
     height: 100%;
+    width: 100%;
     padding: 0;
-    border: 1px solid blue;
+    -webkit-mask: none;
+            mask: none;
   }
   .App #category-bar .categories div p {
     font-size: 1.3em;

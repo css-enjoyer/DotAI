@@ -186,7 +186,7 @@ $bgWidth: 10000px;
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 45px;
             font-size: 1.3rem;
             mask: linear-gradient(
                 to bottom,
@@ -200,7 +200,7 @@ $bgWidth: 10000px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 4px;
+                gap: 12px;
                 p {
                     font-size: 2.2rem;
                     letter-spacing: 2px;
@@ -234,9 +234,8 @@ $bgWidth: 10000px;
         display: grid;
         grid-template-areas: "nav nav"
                              "hero categories";
-        grid-template-rows: 70px 100%;
-        grid-template-columns: 60% 40%;
-        border: 1px solid red;
+        grid-template-rows: 70px calc(100% - 70px);
+        grid-template-columns: 70% 30%;
         #side-bar {
             grid-area: nav;
             width: 100%;
@@ -259,26 +258,28 @@ $bgWidth: 10000px;
         }
         #main {
             grid-area: hero;
-            .HeroSelect { padding: 5px;}
-            #hero-list {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)) !important;
-                grid-gap: 6px !important;
+            .HeroSelect { 
+                padding: 15px;
+                #hero-list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
+                    grid-gap: 6px !important;
+                }
             }
         }
         #category-bar {
             grid-area: categories;
             width: 100%;
-            padding: 0;
+            padding-bottom: 15px;
+            padding-left: 0;
             background: none;
             box-shadow: none;
             backdrop-filter: blur(0);
-            // border: 1px solid red;
             .categories {
                 height: 100%;
+                width: 100%;
                 padding: 0;
-                border: 1px solid blue;
-                // mask: unset;
+                mask: none;
                 div {
                     p {
                         font-size: 1.3em;
