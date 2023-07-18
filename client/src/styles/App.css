@@ -301,8 +301,6 @@ button {
   }
 }
 .invisible {
-  opacity: 100%;
-  max-width: 0% !important;
-  transform: scale(0%);
-  transform-origin: 0% 0%;
+  opacity: 50%;
+  max-width: 10% !important;
 }/*# sourceMappingURL=App.css.map */
