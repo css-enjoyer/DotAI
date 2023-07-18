@@ -14,7 +14,7 @@
 
 html, body, #root, .App {
   height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 p, li, a, button {
@@ -46,11 +46,12 @@ button {
   }
 }
 .App {
+  background-image: radial-gradient(#d0d0d0 0.7px, #13171a 0.7px);
   background: linear-gradient(to right, #626C75 0%, #181D23 25%, #13171a 50%, #181D23 75%, #626C75 100%);
   background-size: 10000px 100%;
   animation: bg 25s linear infinite;
   display: flex;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .App #side-bar {
   width: 20%;
@@ -127,6 +128,7 @@ button {
   height: 100%;
   padding: 20px 50px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .App #main .HeroSelect #hero-list {
   display: grid;
@@ -151,10 +153,11 @@ button {
 .App #main .HeroSelect #hero-list .Hero p {
   position: absolute;
   font-size: 100%;
-  bottom: 0;
+  bottom: 5px;
+  left: 5px;
   opacity: 0%;
   line-height: 15px;
-  transform: translateX(100%);
+  transform: translateX(50%);
 }
 .App #main .HeroSelect #hero-list .Hero:hover {
   box-shadow: 0px 8px 8px black;
@@ -245,14 +248,13 @@ button {
     grid-area: nav;
     width: 100%;
     padding: 10px 30px;
-    gap: 5px;
   }
   .App #side-bar div {
-    height: 100%;
     width: 100%;
     font-size: 0.8rem;
-    position: relative;
-    top: 0;
+  }
+  .App #side-bar div .header {
+    font-size: 2rem;
   }
   .App #side-bar div p {
     font-size: 0.8rem;
@@ -285,14 +287,17 @@ button {
             backdrop-filter: blur(0);
   }
   .App #category-bar .categories {
-    height: 100%;
+    height: 85%;
     width: 100%;
     padding: 0;
     -webkit-mask: none;
             mask: none;
   }
   .App #category-bar .categories div p {
-    font-size: 1.3em;
+    font-weight: bolder;
+  }
+  .App #category-bar .categories div p, .App #category-bar .categories div li {
+    font-size: 0.8em;
   }
 }
 .invisible {
