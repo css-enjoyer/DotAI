@@ -25,7 +25,7 @@ function HeroSelect() {
 		<div className="HeroSelect">
 			<div id="hero-list">
 				{heroes.map(hero => (
-					<Hero name={hero.name} image={getHeroImageURL(hero.image)} key={hero.id} />
+					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id} />
 				))}
 			</div>
 		</div>

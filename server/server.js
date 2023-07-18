@@ -7,11 +7,13 @@ if(process.env.NODE_ENV != 'production') {
 // import dependencies
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 const connectToDB = require("./config/connectToDB");
 const { Hero } = require("./models/hero");
 
 // create express app
-const app = express()
+const app = express();
+app.use(cors());
 app.use(express.json());
 
 // connect to database
@@ -23,8 +25,9 @@ app.get('/', (req, res) => {
 });
 app.get("/heroes", async (req, res) => {
     try {
-        const heroes = await Hero.find({}, { name: 1, categories: 1, _id: 0 }); // Projection to include only name and categories fields
+        const heroes = await Hero.find({}, { name: 1, categories: 1, img: 1, _id: 1 }); // Projection to include only name and categories fields
         res.json(heroes);
+        console.log("Heroes endpoint successful"); 
     } catch (error) {
         console.error("Error retrieving heroes:", error);
         res.status(500).json({ error: "Something went wrong" });
