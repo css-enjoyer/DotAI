@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 function Categories({onCategoryClick, selectedCategories}) {
 
     const categoryList = [
-        { title: 'Lane', categories: ['Safelane','Midlane','Offlane','Soft Support','Hard Support','Roamer','Baby Sitter','Lane Sustainer', 'Lane Dominator', 'Solo Laners'] },
-        { title: 'Teamfights', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Debuff', 'BKB Disablers', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer'] },
+        { title: 'Lane', categories: ['Safelane','Midlane','Offlane','Soft Support','Hard Support','Roamer','Baby Sitter','Lane Sustainer', 'Lane Dominator', 'Solo Laner'] },
+        { title: 'Teamfights', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Debuff', 'BKB Disabler', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer'] },
         { title: 'Attributes', categories: ['Intelligence', 'Strength', 'Agility', 'Anti Intelligence', 'Anti Strength', 'Anti Agility', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Ranged', 'Melee'] },
-        { title: 'General', categories: ['Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Anti Invi', 'Anti Burst', 'Anti Evasion', 'Anti Summons', 'Anti Illusion', 'Area Vision', 'Area Control'] },
+        { title: 'General', categories: ['Split Push', 'Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Anti Invi', 'Anti Burst', 'Anti Evasion', 'Anti Summons', 'Anti Illusion', 'Area Vision', 'Area Control'] },
     ];
 
   return (
