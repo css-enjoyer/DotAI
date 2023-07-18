@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 
-import { AiOutlineArrowRight } from "react-icons/ai";
-
-function Categories() {
-    const [selectedCategories, setSelectedCategories] = useState([]);
-
-    const handleCategoryClick = (category) => {
-        console.log(selectedCategories);
-        if (selectedCategories.includes(category)) {
-            setSelectedCategories(selectedCategories.filter((c) => c !== category));
-        } else {
-            setSelectedCategories([...selectedCategories, category]);
-        }
-    };
+function Categories({onCategoryClick, selectedCategories}) {
 
     const categoryList = [
         { title: 'Lanes', categories: ['Lane Sustainer', 'Lane Dominator', 'Solo Laners'] },
@@ -28,7 +16,7 @@ function Categories() {
                 <p>{section.title}</p>
                 {section.categories.map((category) => (
                 <li key={category} className={selectedCategories.includes(category) ? 'selected' : ''}
-                onClick={() => handleCategoryClick(category)}>
+                onClick={() => onCategoryClick(category)}>
                     {category}
                 </li>
                 ))}

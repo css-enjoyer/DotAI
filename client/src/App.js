@@ -5,7 +5,17 @@ import Categories from './components/Categories';
 import './styles/App.css';
 
 function App() {
+	const [selectedCategories, setSelectedCategories] = useState([]);
 
+    const handleCategoryClick = (category) => {
+		if (selectedCategories.includes(category)) {
+			setSelectedCategories(selectedCategories.filter((c) => c !== category));
+        } else {
+			setSelectedCategories([...selectedCategories, category]);
+        }
+		console.log(selectedCategories);
+    };
+	  
   	return (
     	<div className="App">
 			<div id="side-bar">
@@ -21,10 +31,15 @@ function App() {
 				</ul>
 			</div>
 			<div id="main">
-				<HeroSelect/>
+				<HeroSelect 
+					selectedCategories={selectedCategories}
+				/>
 			</div>
 			<div id="category-bar">
-				<Categories/>
+				<Categories
+					selectedCategories={selectedCategories}
+					onCategoryClick={handleCategoryClick}
+				/>
 			</div>
     	</div>
   	);
