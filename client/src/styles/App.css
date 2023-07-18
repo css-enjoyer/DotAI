@@ -131,11 +131,15 @@ button {
   overflow-x: hidden;
 }
 .App #main .HeroSelect #hero-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  grid-gap: 12px;
+  border: 1px solid red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 .App #main .HeroSelect #hero-list .Hero {
+  flex: 1 0 130px;
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 4px black;
@@ -270,11 +274,6 @@ button {
   }
   .App #main .HeroSelect {
     padding: 15px;
-  }
-  .App #main .HeroSelect #hero-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
-    grid-gap: 6px !important;
   }
   .App #category-bar {
     grid-area: categories;
