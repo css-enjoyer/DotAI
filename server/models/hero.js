@@ -26,6 +26,7 @@ async function createHeroModels() {
 			if(!existingHero) {
 				const newHero = new Hero({
 					name: hero.localized_name,
+					image: hero.icon,
 					categories: [], // Assign categories as needed
 				});
 			await newHero.save();
