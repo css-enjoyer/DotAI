@@ -17,12 +17,6 @@ html, body, #root, .App {
   overflow-y: hidden;
 }
 
-.header {
-  font-family: "Kanit", sans-serif;
-  line-height: 30px;
-  text-align: center;
-}
-
 p, li, a, button {
   font-family: "Rubik", serif !important;
 }
@@ -53,7 +47,6 @@ button {
 }
 .App {
   background: linear-gradient(to right, #626C75 0%, #181D23 25%, #13171a 50%, #181D23 75%, #626C75 100%);
-  background: linear-gradient(90deg, rgb(30, 48, 65) 0%, rgb(66, 38, 0) 24%, rgb(57, 2, 2) 51%, rgb(72, 75, 92) 74%, rgb(30, 48, 65) 100%);
   background-size: 10000px 100%;
   animation: bg 25s linear infinite;
   display: flex;
@@ -78,7 +71,12 @@ button {
   cursor: pointer;
   position: absolute;
   width: 90%;
-  top: 20px;
+}
+.App #side-bar div .header {
+  font-family: "Kanit", sans-serif;
+  line-height: 50px;
+  font-size: 3rem;
+  text-align: center;
 }
 .App #side-bar div p {
   font-size: 0.85rem;
