@@ -3,31 +3,33 @@ import Hero from './Hero';
 
 function HeroSelect() {
 	const [heroes, setHeroes] = useState([]);
+
 	useEffect(() => {
-		fetch('https://api.opendota.com/api/heroStats')
+		fetch('http://localhost:4000/heroes') // Update the URL to point to your backend endpoint
 			.then(response => response.json())
 			.then(data => { 
 				setHeroes(data);
-		})
-		.catch(error => {
-		  	console.error(error);
-		});
+				console.log("Heroes sucessfully retrieved from database");
+			})
+			.catch(error => {
+				console.error(error);
+			});
 	}, []);
-	const getHeroImageURL = (icon) => {
+
+	const getHeroImageURL = (image) => {
 		const baseURL = 'https://api.opendota.com';
-		return `${baseURL}${icon}`;
+		return `${baseURL}${image}`;
 	};
 
-  	return (
-    	<div className="HeroSelect">
-            <div id="hero-list">
-
+	return (
+		<div className="HeroSelect">
+			<div id="hero-list">
 				{heroes.map(hero => (
-				<Hero image={getHeroImageURL(hero.img)} name={hero.localized_name} key={hero.id}/>
+					<Hero name={hero.name} image={getHeroImageURL(hero.image)} key={hero.id} />
 				))}
-
-            </div>
-    	</div>
-  	);
+			</div>
+		</div>
+	);
 }
 export default HeroSelect;
+
