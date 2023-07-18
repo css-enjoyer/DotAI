@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 function Categories({onCategoryClick, selectedCategories}) {
 
     const categoryList = [
-        { title: 'Lanes', categories: ['Lane Sustainer', 'Lane Dominator', 'Solo Laners'] },
-        { title: 'Fights', categories: ['Initiator', 'Burst', 'Escape', 'Disabler', 'Anti Mana', 'Sustainer/Healer', 'Anti Heal', 'Saver/Void', 'Highground Defense', 'Highground Offense', 'Burn Damage', 'Crowd control', 'Anti Intelligence', 'Anti Strength', 'Anti Agility', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Map Vision', 'BKB Disables', 'Chasedown', 'Instant Lockdown'] },
-        { title: 'General', categories: ['Physical Damage', 'Magic Damage', 'Anti Push', 'Wave Clear', 'Roshan', 'Global Presence', 'Melee', 'Ranged', 'Anti Invisible', 'Anti Burst', 'Anti Evasion', 'Anti Summons', 'Anti Illusions', 'Debuffs'] }
+        { title: 'Lane', categories: ['Safelane','Midlane','Offlane','Soft Support','Hard Support','Roamer','Baby Sitter','Lane Sustainer', 'Lane Dominator', 'Solo Laners'] },
+        { title: 'Teamfights', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Debuff', 'BKB Disablers', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer'] },
+        { title: 'Attributes', categories: ['Intelligence', 'Strength', 'Agility', 'Anti Intelligence', 'Anti Strength', 'Anti Agility', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Ranged', 'Melee'] },
+        { title: 'General', categories: ['Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Anti Invi', 'Anti Burst', 'Anti Evasion', 'Anti Summons', 'Anti Illusion', 'Area Vision', 'Area Control'] },
     ];
 
   return (
