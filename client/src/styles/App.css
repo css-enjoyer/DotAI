@@ -52,10 +52,12 @@ button {
   }
 }
 .App {
-  background-color: darkred;
+  background: linear-gradient(to right, #626C75 0%, #181D23 25%, #13171a 50%, #181D23 75%, #626C75 100%);
+  background: linear-gradient(90deg, rgb(30, 48, 65) 0%, rgb(66, 38, 0) 24%, rgb(57, 2, 2) 51%, rgb(72, 75, 92) 74%, rgb(30, 48, 65) 100%);
+  background-size: 10000px 100%;
+  animation: bg 25s linear infinite;
   display: flex;
   overflow-y: hidden;
-  border: 1px solid blue;
 }
 .App #side-bar {
   width: 20%;
@@ -137,6 +139,7 @@ button {
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 4px black;
+  max-width: 130px;
 }
 .App #main .HeroSelect #hero-list .Hero img {
   height: auto;
