@@ -131,7 +131,6 @@ button {
   overflow-x: hidden;
 }
 .App #main .HeroSelect #hero-list {
-  border: 1px solid red;
   display: flex;
   align-items: flex-start;
   justify-content: center;
