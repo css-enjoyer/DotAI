@@ -23,12 +23,6 @@ function App() {
 					<h1 className="header title">DotAI: Dota Drafter</h1>
 					<p>Good drafting is vital for team success, forming a strong composition that synergizes well together. DotAI allows you to effortlessly filter heroes based on your enemies' strengths and weaknesses by selecting from a list of various categories.</p>
 				</div>
-				{/* <ul id="nav">
-					<li><button className="nav-button">Drafting</button></li>
-					<li><button className="nav-button">Tutorial</button></li>
-					<li><button className="nav-button">FAQ</button></li>
-					<li><button className="nav-button">Contact</button></li>
-				</ul> */}
 			</div>
 			<div id="main">
 				<HeroSelect selectedCategories={selectedCategories}/>

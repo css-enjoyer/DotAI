@@ -186,25 +186,20 @@ button {
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(49, 56, 60, 0) 77%, rgba(96, 109, 117, 0) 100%);
 }
 .App #category-bar {
-  padding-left: 12px;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5.7px);
           backdrop-filter: blur(5.7px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
-  width: 25%;
-  display: flex;
-  align-items: center;
+  height: 100%;
+  width: 20%;
+  padding-left: 12px;
 }
 .App #category-bar .categories {
-  height: 85%;
-  padding: 15px 0;
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-  font-size: 1.3rem;
+  padding: 20px 0;
   -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
           mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
 }
@@ -212,24 +207,31 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 .App #category-bar .categories div p {
-  font-size: 2.2rem;
-  letter-spacing: 2px;
   width: 100%;
+  font-size: 1.6rem;
   text-align: center;
+  padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  margin-top: 30px;
+}
+.App #category-bar .categories div:hover li {
+  color: rgb(151, 151, 151);
 }
 .App #category-bar .categories div li {
-  cursor: pointer;
   width: 80%;
+  font-size: 1.1rem;
+  cursor: pointer;
   text-align: center;
   list-style-type: none;
   transition: 0.1s ease-in-out;
 }
 .App #category-bar .categories div li:hover {
   transform: scale(1.4);
+  text-shadow: 0px 3px 3px rgb(36, 36, 36);
   color: white;
 }
 .App #category-bar .categories div .selected {
