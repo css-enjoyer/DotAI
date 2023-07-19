@@ -32,8 +32,7 @@ function Categories({ onCategoryClick, selectedCategories }) {
                             <li
                             key={category}
                             className={selectedCategories.includes(category) ? 'selected' : ''}
-                            onClick={() => onCategoryClick(category)}
-                            >
+                            onClick={() => onCategoryClick(category)}>
                             {category}
                             </li>
                         ))
