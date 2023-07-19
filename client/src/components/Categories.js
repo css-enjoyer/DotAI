@@ -9,23 +9,30 @@ function Categories({onCategoryClick, selectedCategories}) {
         { title: 'General', categories: ['Split Push', 'Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Anti Invi', 'Anti Burst', 'Anti Evasion', 'Anti Summons', 'Anti Illusion', 'Area Vision', 'Area Control'] },
     ];
 
-  return (
-    <ul className="categories">
-        {categoryList.map((section) => (
-            <React.Fragment key={section.title}>
-            <div>
-                <p>{section.title}</p>
-                {section.categories.map((category) => (
-                <li key={category} className={selectedCategories.includes(category) ? 'selected' : ''}
-                onClick={() => onCategoryClick(category)}>
-                    {category}
-                </li>
-                ))}
-            </div>
-            </React.Fragment>
-        ))}
-    </ul>
-  );
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <ul className="categories">
+            {categoryList.map((section) => (
+                <React.Fragment key={section.title}>
+                <div>
+                    <p onClick={toggleDropdown}>{section.title}</p>
+                    {isOpen && (    
+                        section.categories.map((category) => (
+                            <li key={category} className={selectedCategories.includes(category) ? 'selected' : ''}
+                            onClick={() => onCategoryClick(category)}>
+                                {category}
+                            </li>
+                        ))
+                    )}
+                </div>
+                </React.Fragment>
+            ))}
+        </ul>
+    );
 }
 
 export default Categories;
