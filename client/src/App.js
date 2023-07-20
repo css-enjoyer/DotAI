@@ -3,6 +3,7 @@ import HeroSelect from './components/HeroSelect';
 import Categories from './components/Categories';
 
 import './styles/App.css';
+import './styles/General.css';
 
 function App() {
 	const [selectedCategories, setSelectedCategories] = useState([]);
