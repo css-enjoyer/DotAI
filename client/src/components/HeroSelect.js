@@ -30,9 +30,7 @@ function HeroSelect({ selectedCategories }) {
 		<div className="HeroSelect">
 			<div id="hero-list">
 				{filteredHeroes.map(hero => (
-					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id}
-					// className={!selectedCategories.length || hero.categories.some(category => selectedCategories.includes(category)) ? '' : 'invisible'}
-					/>
+					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id}/>
 				))}
 			</div>
 		</div>
