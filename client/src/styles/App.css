@@ -106,6 +106,8 @@
   box-shadow: 0 0 4px black;
   max-width: 130px;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
+  filter: saturate(80%);
 }
 .App #main .HeroSelect #hero-list .Hero img {
   height: auto;
@@ -125,6 +127,7 @@
   transform: translateX(50%);
 }
 .App #main .HeroSelect #hero-list .Hero:hover {
+  filter: saturate(100%);
   box-shadow: 0px 8px 8px black;
   z-index: 998;
   transform: scale(1.5);

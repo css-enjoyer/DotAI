@@ -103,6 +103,7 @@ $bgWidth: 10000px;
                     max-width: 130px;
                     transition: 0.3s ease-in-out;
                     cursor: pointer;
+                    filter: saturate(80%);
                     img {
                         height: auto;
                         width: 100%;
@@ -120,6 +121,7 @@ $bgWidth: 10000px;
                         transform: translateX(50%);
                     }
                     &:hover {
+                        filter: saturate(100%);
                         box-shadow: 0px 8px 8px black;
                         z-index: 998;
                         transform: scale(1.5);
