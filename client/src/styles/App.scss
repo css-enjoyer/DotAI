@@ -119,6 +119,7 @@ $bgWidth: 10000px;
                         opacity: 0%;
                         line-height: 15px;
                         transform: translateX(50%);
+                        text-shadow: 0px 2px 5px black;
                     }
                     &:hover {
                         filter: saturate(100%);
