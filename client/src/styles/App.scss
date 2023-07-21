@@ -168,16 +168,18 @@ $bgWidth: 10000px;
                 gap: 6px;
                 p {
                     width: 100%;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 500;
                     text-align: center;
-                    padding: 5px 15px;
-                    background-color: rgba(white, 0.1);
+                    padding: 10px 30px;
+                    border: 2px solid rgba(white, 0.1);
+                    border-radius: 3px;
                     cursor: pointer;
                     margin-bottom: 5px;
                     &:hover {
                         box-shadow: inset 0px 5px 5px rgba(28, 28, 28, 0.5);
                         transform: translateY(-3px);
+                        color: white;
                     }
                 }
                 &:hover {

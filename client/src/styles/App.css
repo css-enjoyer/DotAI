@@ -174,17 +174,19 @@
 }
 .App #category-bar .categories div p {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  padding: 5px 15px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
   cursor: pointer;
   margin-bottom: 5px;
 }
 .App #category-bar .categories div p:hover {
   box-shadow: inset 0px 5px 5px rgba(28, 28, 28, 0.5);
   transform: translateY(-3px);
+  color: white;
 }
 .App #category-bar .categories div:hover li {
   opacity: 70%;
