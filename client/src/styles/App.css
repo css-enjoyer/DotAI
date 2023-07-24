@@ -80,6 +80,7 @@
   color: white;
 }
 .App #main {
+  width: 100%;
   height: 100%;
   display: grid;
   place-items: center;
@@ -87,7 +88,7 @@
 .App #main .HeroSelect {
   width: 100%;
   height: 100%;
-  padding: 20px 50px;
+  padding: 20px 10px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -97,10 +98,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
 }
 .App #main .HeroSelect #hero-list .Hero {
-  flex: 1 0 15%;
-  min-width: 120px;
+  flex: 0 1 120px;
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 4px black;
