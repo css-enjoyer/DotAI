@@ -93,11 +93,11 @@ $bgWidth: 10000px;
                 flex-wrap: wrap;
                 gap: 12px;
                 .Hero {
-                    flex: 1 0 130px;
+                    flex: 1 0 15%;
+                    min-width: 120px;
                     display: flex;
                     overflow: hidden;
                     box-shadow: 0 0 4px black;
-                    max-width: 130px;
                     transition: 0.3s ease-in-out;
                     cursor: pointer;
                     filter: saturate(80%);
