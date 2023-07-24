@@ -30,9 +30,9 @@ function HeroSelect({ selectedCategories }) {
 	return (
 		<div id="hero-list">
 			{filteredHeroes.map(hero => (
-				// <div className="">
+				<div className="hero-wrapper">
 					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id}/>
-				// </div>
+				</div>
 			))}
 		</div>
 	);
