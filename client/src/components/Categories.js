@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion"
 
 function Categories({ onCategoryClick, selectedCategories }) {
     const categoryList = [
@@ -37,17 +38,20 @@ function Categories({ onCategoryClick, selectedCategories }) {
                         <p onClick={() => toggleDropdown(section.title)}>
                             {section.title} ({selectedCounts[section.title] || 0}/{section.categories.length})
                         </p>
-                        {openItems.includes(section.title) && (
-                            section.categories.map((category) => (
-                                <li
-                                    key={category}
-                                    className={selectedCategories.includes(category) ? 'selected' : ''}
-                                    onClick={() => handleCategoryClick(category, section.title)}
-                                >
-                                    {category}
-                                </li>
-                            ))
-                        )}
+                        <AnimatePresence>
+                            {openItems.includes(section.title) && (
+                                section.categories.map((category) => (
+                                    <motion.li key={category}
+                                        className={selectedCategories.includes(category) ? 'selected' : ''}
+                                        onClick={() => handleCategoryClick(category, section.title)}
+                                        initial={{ y: "-100%", opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        exit={{ y: "100%", opacity: 0 }}>
+                                        {category}
+                                    </motion.li>
+                                ))
+                            )}
+                        </AnimatePresence>
                     </div>
                 </React.Fragment>
             ))}
