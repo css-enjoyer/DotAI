@@ -9,6 +9,8 @@ function Categories({ onCategoryClick, selectedCategories }) {
     ];
 
     const [openItems, setOpenItems] = useState([]);
+    const [selectedCounts, setSelectedCounts] = useState({});
+
     const toggleDropdown = (title) => {
         setOpenItems((prevOpenItems) => {
             if (prevOpenItems.includes(title)) {
@@ -19,25 +21,34 @@ function Categories({ onCategoryClick, selectedCategories }) {
         });
     };
 
+    const handleCategoryClick = (category, title) => {
+        onCategoryClick(category);
+        setSelectedCounts((prevSelectedCounts) => {
+            const count = prevSelectedCounts[title] || 0;
+            return { ...prevSelectedCounts, [title]: selectedCategories.includes(category) ? count - 1 : count + 1 };
+        });
+    };
+
     return (
         <ul className="categories">
             {categoryList.map((section) => (
                 <React.Fragment key={section.title}>
-                <div>
-                    <p onClick={() => toggleDropdown(section.title)}>
-                        {section.title}
-                    </p>
-                    {openItems.includes(section.title) && (
-                        section.categories.map((category) => (
-                            <li
-                            key={category}
-                            className={selectedCategories.includes(category) ? 'selected' : ''}
-                            onClick={() => onCategoryClick(category)}>
-                            {category}
-                            </li>
-                        ))
-                    )}
-                </div>
+                    <div>
+                        <p onClick={() => toggleDropdown(section.title)}>
+                            {section.title} ({selectedCounts[section.title] || 0}/{section.categories.length})
+                        </p>
+                        {openItems.includes(section.title) && (
+                            section.categories.map((category) => (
+                                <li
+                                    key={category}
+                                    className={selectedCategories.includes(category) ? 'selected' : ''}
+                                    onClick={() => handleCategoryClick(category, section.title)}
+                                >
+                                    {category}
+                                </li>
+                            ))
+                        )}
+                    </div>
                 </React.Fragment>
             ))}
         </ul>
