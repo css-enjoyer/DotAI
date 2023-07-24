@@ -4,7 +4,7 @@ import Hero from './Hero';
 function HeroSelect({ selectedCategories }) {
 	const [heroes, setHeroes] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:4000/heroes')
+		fetch('https://dotai.onrender.com/heroes')
 		.then(response => response.json())
 		.then(data => { 
 			setHeroes(data);
