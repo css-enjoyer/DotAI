@@ -6,8 +6,6 @@ $bgWidth: 10000px;
     100% { background-position-x: $bgWidth; }
 }
 .App {
-    // background-color: darkred;
-    // background: linear-gradient(90deg, rgba(30,48,65,1) 0%, rgba(66,38,0,1) 24%, rgba(57,2,2,1) 51%, rgba(72,75,92,1) 74%, rgba(30,48,65,1) 100%);
     background-image: radial-gradient(#d0d0d0 0.7px, #13171a 0.7px);
     background: linear-gradient(to right, #626C75 0%,#181D23 25%,#13171a 50%,#181D23 75%,#626C75 100%); 
     background-size: $bgWidth 100%;
@@ -15,7 +13,7 @@ $bgWidth: 10000px;
     display: flex;
     overflow: hidden;
     #side-bar {
-        width: 20%;
+        min-width: 120px;
         padding: 60px 20px;
         display: flex;
         flex-direction: column;
@@ -34,8 +32,8 @@ $bgWidth: 10000px;
             width: 90%;
             .header {
                 font-family: 'Kanit', sans-serif;
-                line-height: 50px;
-                font-size: 3rem;
+                line-height: 40px;
+                font-size: 2rem;
                 text-align: center;
             }
             p { 
@@ -80,7 +78,6 @@ $bgWidth: 10000px;
     }
     #main {
         height: 100%;
-        width: 100%;
         display: grid;
         place-items: center;
         .HeroSelect {
@@ -150,11 +147,11 @@ $bgWidth: 10000px;
         }
     }
     #category-bar {
+        min-width: 180px;
+        height: 100%;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(5.7px);
         border-left: 1px solid rgba(255, 255, 255, 0.3);
-        height: 100%;
-        width: 20%;
         padding-left: 5px;
         .categories {
             height: 100%;
@@ -171,7 +168,8 @@ $bgWidth: 10000px;
                     font-size: 1.2rem;
                     font-weight: 500;
                     text-align: center;
-                    padding: 10px 30px;
+                    height: 38px;
+                    line-height: 38px;
                     border: 2px solid rgba(white, 0.1);
                     border-radius: 3px;
                     cursor: pointer;
@@ -239,14 +237,22 @@ $bgWidth: 10000px;
             #nav { flex-direction: row; }
         }
         #main {
+            width: auto;
             grid-area: hero;
             .HeroSelect { 
                 padding: 15px;
+                #hero-list {
+                    .Hero {
+                        flex: 0 1 calc(100px - 10px);
+                        min-width: 100px; 
+                    }
+                }
             }
         }
         #category-bar {
             grid-area: categories;
             width: 100%;
+            min-width: 0;
             padding-bottom: 15px;
             padding-left: 0;
             background: none;
@@ -266,6 +272,28 @@ $bgWidth: 10000px;
                     }
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .App {
+        #side-bar {
+            
+        }
+        #main {
+            .HeroSelect {
+                padding: 10px 0;
+                #hero-list {
+                    gap: 5px;
+                    .Hero {
+                        max-width: 90px;
+                    }
+                }
+            }
+        }
+        #category-bar {
+            
         }
     }
 }

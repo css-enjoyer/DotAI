@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 .App #side-bar {
-  width: 20%;
+  min-width: 120px;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -37,8 +37,8 @@
 }
 .App #side-bar div .header {
   font-family: "Kanit", sans-serif;
-  line-height: 50px;
-  font-size: 3rem;
+  line-height: 40px;
+  font-size: 2rem;
   text-align: center;
 }
 .App #side-bar div p {
@@ -81,7 +81,6 @@
 }
 .App #main {
   height: 100%;
-  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -152,12 +151,12 @@
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(49, 56, 60, 0) 77%, rgba(96, 109, 117, 0) 100%);
 }
 .App #category-bar {
+  min-width: 180px;
+  height: 100%;
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(5.7px);
           backdrop-filter: blur(5.7px);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
-  height: 100%;
-  width: 20%;
   padding-left: 5px;
 }
 .App #category-bar .categories {
@@ -177,7 +176,8 @@
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  padding: 10px 30px;
+  height: 38px;
+  line-height: 38px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   cursor: pointer;
@@ -245,14 +245,20 @@
     flex-direction: row;
   }
   .App #main {
+    width: auto;
     grid-area: hero;
   }
   .App #main .HeroSelect {
     padding: 15px;
   }
+  .App #main .HeroSelect #hero-list .Hero {
+    flex: 0 1 90px;
+    min-width: 100px;
+  }
   .App #category-bar {
     grid-area: categories;
     width: 100%;
+    min-width: 0;
     padding-bottom: 15px;
     padding-left: 0;
     background: none;
@@ -272,5 +278,16 @@
   }
   .App #category-bar .categories div p, .App #category-bar .categories div li {
     font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .App #main .HeroSelect {
+    padding: 10px 0;
+  }
+  .App #main .HeroSelect #hero-list {
+    gap: 5px;
+  }
+  .App #main .HeroSelect #hero-list .Hero {
+    max-width: 90px;
   }
 }/*# sourceMappingURL=App.css.map */
