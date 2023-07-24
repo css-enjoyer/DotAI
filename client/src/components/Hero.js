@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion"
 
 function Hero({image, name, className}) {
+	
 	const openHeroPage = () => {
 		// Encode the hero name for the URL
 		const encodedName = encodeURIComponent(name);

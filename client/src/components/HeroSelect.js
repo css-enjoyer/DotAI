@@ -3,6 +3,7 @@ import Hero from './Hero';
 import { motion, AnimatePresence } from "framer-motion"
 
 function HeroSelect({ selectedCategories }) {
+	
 	const [heroes, setHeroes] = useState([]);
 	useEffect(() => {
 		fetch('https://dotai.onrender.com/heroes')
@@ -29,11 +30,17 @@ function HeroSelect({ selectedCategories }) {
 
 	return (
 		<div id="hero-list">
-			{filteredHeroes.map(hero => (
-				<div className="hero-wrapper">
-					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id}/>
-				</div>
-			))}
+			<AnimatePresence>
+				{filteredHeroes.map(hero => (
+					<motion.div className="hero-wrapper"
+					initial={{ opacity: 0 }}
+					animate={{ scale: 1, opacity: 1 }}
+					exit={{ scale: 0, opacity: 0 }}
+					key={hero._id}>
+						<Hero name={hero.name} image={getHeroImageURL(hero.img)}/>
+					</motion.div>
+				))}
+			</AnimatePresence>
 		</div>
 	);
 }
