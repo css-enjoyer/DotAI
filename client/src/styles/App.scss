@@ -13,7 +13,7 @@ $bgWidth: 10000px;
     display: flex;
     overflow: hidden;
     #side-bar {
-        min-width: 120px;
+        width: 120px;
         padding: 60px 20px;
         display: flex;
         flex-direction: column;
@@ -26,35 +26,12 @@ $bgWidth: 10000px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.7px);
         border-right: 1px solid rgba(255, 255, 255, 0.3);
-        div {
-            cursor: pointer;
-            position: absolute;
-            width: 90%;
-            .header {
-                font-family: 'Kanit', sans-serif;
-                line-height: 40px;
-                font-size: 2rem;
-                text-align: center;
-            }
-            p { 
-                font-size: .85rem; 
-                position: absolute;
-                top: -100px;
-                color: transparent;
-                transform: translateY(50px);
-                z-index: -1;
-            }
-            &:hover {
-                h1 {
-                    color: transparent;
-                    transform: translateY(-50px);
-                }
-                p {
-                    color: var(--white);   
-                    transform: translateY(0);
-                }
-            }
+        h1 {
+            line-height: 30px;
+            font-size: 1.8rem;
+            text-align: center;
         }
+        
         #nav {
             display: flex;
             align-items: center;
