@@ -35,7 +35,10 @@ function Categories({ onCategoryClick, selectedCategories }) {
             {categoryList.map((section) => (
                 <React.Fragment key={section.title}>
                     <div>
-                        <p onClick={() => toggleDropdown(section.title)}>
+                        <p
+                            className={selectedCounts[section.title] > 0 ? 'active' : ''}
+                            onClick={() => toggleDropdown(section.title)}
+                        >
                             {section.title} ({selectedCounts[section.title] || 0}/{section.categories.length})
                         </p>
                         <AnimatePresence>
@@ -47,7 +50,7 @@ function Categories({ onCategoryClick, selectedCategories }) {
                                         initial={{ y: "-100%", opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}>
                                         {category}
-                                    </ motion.li>
+                                    </motion.li>
                                 ))
                             )}
                         </AnimatePresence>

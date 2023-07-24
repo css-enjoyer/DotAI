@@ -178,6 +178,11 @@ $bgWidth: 10000px;
                         color: white;
                     }
                 }
+                .active {
+                    background-color: rgba(white, 0.1);
+                    border: 2px solid rgba(white, 0.5);
+                    color: white;
+                }
                 &:hover {
                     li { opacity: 70%; }
                 }

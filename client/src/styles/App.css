@@ -186,6 +186,11 @@
   transform: translateY(-3px);
   color: white;
 }
+.App #category-bar .categories div .active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
 .App #category-bar .categories div:hover li {
   opacity: 70%;
 }
