@@ -234,7 +234,6 @@
   padding: 10px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.7600744766) 0%, rgba(0, 0, 0, 0.5023713953) 52%, rgba(0, 0, 0, 0) 100%);
   opacity: 60%;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 .App #category-display ul {
   height: 80%;
