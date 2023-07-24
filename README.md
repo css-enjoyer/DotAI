@@ -28,6 +28,7 @@ Categories I'm currently reviewing for deployment:
 - Tower Killers (Heroes that will kill towers if left unchecked)
 - Rampage (Heroes that solo rampage (under the proper circumstances))
 - Complexity (Varying levels of hero complexity)
+
 Features I plan to implement in the future:
 - [ ] Indicate number of heroes matching in a specific category
 - [ ] Hero sorter, sort heroes by name/attribute/etc...
