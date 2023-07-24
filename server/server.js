@@ -13,7 +13,13 @@ const { Hero } = require("./models/hero");
 
 // create express app
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://dotai-api.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 // connect to database
@@ -21,7 +27,7 @@ connectToDB();
 
 // create routes
 app.get('/', (req, res) => {
-    res.json({hello: "world"});
+    res.json("Hello");
 });
 app.get("/heroes", async (req, res) => {
     try {
