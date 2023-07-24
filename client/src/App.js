@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroSelect from './components/HeroSelect';
 import Categories from './components/Categories';
 
@@ -6,6 +6,11 @@ import './styles/App.css';
 import './styles/General.css';
 
 function App() {
+
+	useEffect(() => {
+		document.title = 'DotAI';
+	  }, []);
+
 	const [selectedCategories, setSelectedCategories] = useState([]);
 
     const handleCategoryClick = (category) => {
