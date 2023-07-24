@@ -286,7 +286,7 @@
     width: auto;
     grid-area: hero;
   }
-  .App #main #hero-list .Hero {
+  .App #main #hero-list .hero-wrapper {
     flex: 0 1 90px;
     min-width: 100px;
   }
@@ -302,11 +302,8 @@
             backdrop-filter: blur(0);
   }
   .App #category-bar .categories {
-    height: 85%;
     width: 100%;
     padding: 0;
-    -webkit-mask: none;
-            mask: none;
   }
   .App #category-bar .categories div p {
     font-weight: bolder;
@@ -319,13 +316,7 @@
   }
 }
 @media only screen and (max-width: 380px) {
-  .App #main .HeroSelect {
-    padding: 10px 0;
-  }
-  .App #main .HeroSelect #hero-list {
+  .App #main #hero-list {
     gap: 5px;
-  }
-  .App #main .HeroSelect #hero-list .Hero {
-    max-width: 90px;
   }
 }/*# sourceMappingURL=App.css.map */

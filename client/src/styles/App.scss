@@ -276,7 +276,7 @@ $bgWidth: 10000px;
             width: auto;
             grid-area: hero;
             #hero-list {
-                .Hero {
+                .hero-wrapper {
                     flex: 0 1 calc(100px - 10px);
                     min-width: 100px; 
                 }
@@ -292,10 +292,8 @@ $bgWidth: 10000px;
             box-shadow: none;
             backdrop-filter: blur(0);
             .categories {
-                height: 85%;
                 width: 100%;
                 padding: 0;
-                mask: none;
                 div {
                     p {
                         font-weight: bolder;
@@ -308,7 +306,6 @@ $bgWidth: 10000px;
         }
         #category-display {
             left: 0;
-
         }
     }
 }
@@ -317,14 +314,8 @@ $bgWidth: 10000px;
     .App {
         // #side-bar {}
         #main {
-            .HeroSelect {
-                padding: 10px 0;
-                #hero-list {
-                    gap: 5px;
-                    .Hero {
-                        max-width: 90px;
-                    }
-                }
+            #hero-list {
+                gap: 5px;
             }
         }
         // #category-bar {}
