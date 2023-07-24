@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
+import { motion, AnimatePresence } from "framer-motion"
 
 function HeroSelect({ selectedCategories }) {
 	const [heroes, setHeroes] = useState([]);
@@ -27,12 +28,12 @@ function HeroSelect({ selectedCategories }) {
 	} 
 
 	return (
-		<div className="HeroSelect">
-			<div id="hero-list">
-				{filteredHeroes.map(hero => (
+		<div id="hero-list">
+			{filteredHeroes.map(hero => (
+				// <div className="">
 					<Hero name={hero.name} image={getHeroImageURL(hero.img)} key={hero._id}/>
-				))}
-			</div>
+				// </div>
+			))}
 		</div>
 	);
 }

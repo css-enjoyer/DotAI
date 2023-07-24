@@ -1,5 +1,6 @@
-function Hero({image, name, className}) {
+import { motion, AnimatePresence } from "framer-motion"
 
+function Hero({image, name, className}) {
 	const openHeroPage = () => {
 		// Encode the hero name for the URL
 		const encodedName = encodeURIComponent(name);
@@ -10,10 +11,10 @@ function Hero({image, name, className}) {
 	}
 
   	return (
-    	<div className={`Hero ${className}`} onClick={openHeroPage}>
-            <img src={image} alt={name} id="hero-img"></img>
-            <p>{name}</p>
-    	</div>
+		<div className={`Hero ${className}`} onClick={openHeroPage}>
+			<img src={image} alt={name} id="hero-img"></img>
+			<p>{name}</p>
+		</div>
   	);
 }
 export default Hero;
