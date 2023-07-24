@@ -44,7 +44,7 @@
 .App #side-bar div p {
   font-size: 0.85rem;
   position: absolute;
-  top: 0;
+  top: -100px;
   color: transparent;
   transform: translateY(50px);
   z-index: -1;
@@ -58,7 +58,6 @@
   transform: translateY(0);
 }
 .App #side-bar #nav {
-  list-style-type: none;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -199,7 +198,6 @@
   font-size: 1.1rem;
   cursor: pointer;
   text-align: center;
-  list-style-type: none;
   transition: 0.1s ease-in-out;
 }
 .App #category-bar .categories div li:hover {
@@ -225,6 +223,33 @@
 }
 .App #category-bar .categories div li:last-child {
   margin-bottom: 30px;
+}
+.App #category-display {
+  min-width: 200px;
+  width: 50vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7600744766) 0%, rgba(0, 0, 0, 0.5023713953) 52%, rgba(0, 0, 0, 0) 100%);
+  opacity: 60%;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.App #category-display ul {
+  height: 80%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.App #category-display ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.85rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -262,10 +287,7 @@
     width: auto;
     grid-area: hero;
   }
-  .App #main .HeroSelect {
-    padding: 15px;
-  }
-  .App #main .HeroSelect #hero-list .Hero {
+  .App #main #hero-list .Hero {
     flex: 0 1 90px;
     min-width: 100px;
   }
@@ -292,6 +314,9 @@
   }
   .App #category-bar .categories div p, .App #category-bar .categories div li {
     font-size: 0.8em;
+  }
+  .App #category-display {
+    left: 0;
   }
 }
 @media only screen and (max-width: 380px) {

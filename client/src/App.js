@@ -36,6 +36,14 @@ function App() {
 			<div id="category-bar">
 				<Categories selectedCategories={selectedCategories} onCategoryClick={handleCategoryClick}/>
 			</div>
+			<div id="category-display">
+				<h5>Selected Categories:</h5>
+				<ul>
+					{selectedCategories.map((category) => (
+						<li key={category}>{category}</li>
+					))}
+				</ul>
+			</div>
     	</div>
   	);
 }

@@ -39,7 +39,7 @@ $bgWidth: 10000px;
             p { 
                 font-size: .85rem; 
                 position: absolute;
-                top: 0;
+                top: -100px;
                 color: transparent;
                 transform: translateY(50px);
                 z-index: -1;
@@ -56,7 +56,6 @@ $bgWidth: 10000px;
             }
         }
         #nav {
-            list-style-type: none;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -191,7 +190,6 @@ $bgWidth: 10000px;
                     font-size: 1.1rem;
                     cursor: pointer; 
                     text-align: center;
-                    list-style-type: none;
                     transition: .1s ease-in-out;
                     &:hover {
                         transform: scale(1.4);
@@ -218,6 +216,30 @@ $bgWidth: 10000px;
                 li:last-child {
                     margin-bottom: 30px;
                 }
+            }
+        }
+    }
+    #category-display {
+        min-width: 200px;
+        width: 50vw;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 120px;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(0,0,0,0.760074476567971) 0%, rgba(0,0,0,0.5023713953354779) 52%, rgba(0,0,0,0) 100%);
+        opacity: 60%;
+        box-shadow: 0 0 5px 5px rgba(black, 0.2);
+        ul {
+            height: 80%;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            column-gap: 12px;
+            li {
+                width: fit-content;
+                font-size: .85rem;
             }
         }
     }
@@ -253,13 +275,10 @@ $bgWidth: 10000px;
         #main {
             width: auto;
             grid-area: hero;
-            .HeroSelect { 
-                padding: 15px;
-                #hero-list {
-                    .Hero {
-                        flex: 0 1 calc(100px - 10px);
-                        min-width: 100px; 
-                    }
+            #hero-list {
+                .Hero {
+                    flex: 0 1 calc(100px - 10px);
+                    min-width: 100px; 
                 }
             }
         }
@@ -286,6 +305,10 @@ $bgWidth: 10000px;
                     }
                 }
             }
+        }
+        #category-display {
+            left: 0;
+
         }
     }
 }
