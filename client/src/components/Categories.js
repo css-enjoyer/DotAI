@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
+import { AiOutlineDown } from "react-icons/ai";
+
 
 function Categories({ onCategoryClick, selectedCategories }) {
     const categoryList = [
-        { title: 'LANE', categories: ['Safelane', 'Midlane', 'Offlane', 'Soft Support', 'Hard Support', 'Roamer', 'Baby Sitter', 'Lane Sustainer', 'Lane Dominator', 'Early Jungler','Solo Offlaner'] },
-        { title: 'TEAMFIGHTS', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Dispel', 'BKB Disabler', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer', 'Tank Killer'] },
+        { title: 'LANING', categories: ['Safelane', 'Midlane', 'Offlane', 'Soft Support', 'Hard Support', 'Roamer', 'Baby Sitter', 'Lane Sustainer', 'Lane Dominator', 'Early Jungler','Solo Offlaner'] },
+        { title: 'TEAMFIGHT', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Dispel', 'BKB Disabler', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer', 'Tank Killer'] },
         { title: 'ATTRIBUTES', categories: ['Intelligence', 'Strength', 'Agility', 'Universal', 'Anti Intelligence', 'Anti Strength', 'Anti Agility', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Ranged', 'Melee'] },
         { title: 'GENERAL', categories: ['Split Push', 'Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Wisdom Steal', 'Anti Burst', 'Anti Illusion', 'Area Vision', 'Area Control'] },
     ];
@@ -35,11 +37,13 @@ function Categories({ onCategoryClick, selectedCategories }) {
             {categoryList.map((section) => (
                 <React.Fragment key={section.title}>
                     <div>
-                        <p
-                            className={selectedCounts[section.title] > 0 ? 'active' : ''}
-                            onClick={() => toggleDropdown(section.title)}
-                        >
-                            {section.title} ({selectedCounts[section.title] || 0}/{section.categories.length})
+                        <p className={selectedCounts[section.title] > 0 ? 'active' : ''}
+                        onClick={() => toggleDropdown(section.title)}>
+                            <AiOutlineDown className="icon"></AiOutlineDown>
+                            {section.title} 
+                            <span>
+                                ({selectedCounts[section.title] || 0}/{section.categories.length})
+                            </span>    
                         </p>
                         <AnimatePresence>
                             {openItems.includes(section.title) && (
