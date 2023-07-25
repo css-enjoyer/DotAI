@@ -39,8 +39,7 @@
         "Crowd Control",
         "Agility",
         "Melee",
-        "Sustain",
-        "Anti Invi"],
+        "Sustain"],
     "Crystal Maiden": [
         "Hard Support",
         "Baby Sitter",
@@ -95,8 +94,7 @@
         "Split Push",
         "Wave Clear",
         "Mobile",
-        "Wisdom Steal",
-        "Anti Summons"],
+        "Wisdom Steal"],
     "Morphling": [
         "Safelane",
         "Lane Sustainer",
@@ -158,8 +156,7 @@
         "Melee",
         "Instant Lockdown",
         "Wisdom Steal",
-        "Anti Ranged",
-        "Anti Summons" ],
+        "Anti Ranged" ],
     "Razor": [
         "Safelane",
         "Midlane",
@@ -219,7 +216,6 @@
         "Melee",
         "Wave Clear",
         "Roshan",
-        "Anti Summons",
         "Anti Illusion"],
     "Tiny": [
         "Safelane",
@@ -284,7 +280,6 @@
         "Wave Clear",
         "Anti Push",
         "Global Presence",
-        "Anti Summons",
         "Anti Illusion",
         "Area Vision",
         "Area Control"],
@@ -308,7 +303,6 @@
         "Wave Clear",
         "Anti Push",
         "Wisdom Steal",
-        "Anti Summons",
         "Anti Illusion",
         "Area Control"],
     "Lina": [
@@ -371,9 +365,7 @@
         "Anti Strength",
         "Anti Melee",
         "Mobile",
-        "Roshan",
-        "Anti Invi",
-        "Anti Evasion"],
+        "Roshan"],
     "Tidehunter": [
         "Offlane",
         "Lane Dominator",
@@ -392,7 +384,6 @@
         "Melee",
         "Wave Clear",
         "Roshan",
-        "Anti Summons",
         "Anti Illusion",
         "Area Control"],
     "Witch Doctor": [
@@ -410,7 +401,6 @@
         "Ranged",
         "Wave Clear",
         "Sustain",
-        "Anti Summons",
         "Area Control"
     ],
     "Lich": [
@@ -696,7 +686,6 @@
         "Wave Clear",
         "Roshan",
         "Anti Burst",
-        "Anti Summons",
         "Area Vision"
     ],
     "Viper": [
@@ -730,7 +719,6 @@
         "Ranged",
         "Split Push",
         "Wave Clear",
-        "Anti Summons",
         "Anti Illusion",
         "Area Control"
     ],
@@ -805,7 +793,6 @@
         "Ranged",
         "Split Push",
         "Wave Clear",
-        "Anti Summons",
         "Anti Illusion",
         "Area Control"
     ],
@@ -826,8 +813,7 @@
         "Melee",
         "Split Push",
         "Sustain",
-        "Roshan",
-        "Anti Summons"
+        "Roshan"
     ],
     "Dark Seer": [
         "Offlane",
@@ -890,7 +876,6 @@
         "Ranged",
         "Split Push",
         "Sustain",
-        "Anti Summons",
         "Anti Illusion"
     ],
     "Huskar": [
@@ -960,7 +945,6 @@
         "Agility",
         "Melee",
         "Wisdom Steal",
-        "Anti Invi",
         "Area Vision"
     ],
     "Weaver": [
@@ -992,7 +976,6 @@
         "Ranged",
         "Wave Clear",
         "Anti Push",
-        "Anti Summons",
         "Anti Illusion",
         "Area Control"
     ],
@@ -1071,8 +1054,7 @@
         "Strength",
         "Melee",
         "Wave Clear",
-        "Anti Heal",
-        "Anti Summons"
+        "Anti Heal"
     ],
     "Ursa": [
         "Safelane",
@@ -1127,7 +1109,6 @@
         "Agility",
         "Ranged",
         "Wave Clear",
-        "Anti Summons",
         "Area Control"   
     ],
     "Alchemist": [
@@ -1430,8 +1411,7 @@
         "Ranged",
         "Wave Clear",
         "Sustain",
-        "Anti Push",
-        "Anti Summons"
+        "Anti Push"
     ],
     "Io": [
         "Hard Support",
@@ -1495,7 +1475,6 @@
         "Wave Clear",
         "Sustain",
         "Anti Burst",
-        "Anti Summons",
         "Area Control"
     ],
     "Troll Warlord": [
@@ -1552,8 +1531,7 @@
         "Wave Clear",
         "Mobile",
         "Wisdom Steal",
-        "Anti Illusion",
-        "Anti Summons"
+        "Anti Illusion"
     ],
     "Timbersaw": [
         "Midlane",
@@ -1593,7 +1571,6 @@
         "Melee",
         "Wave Clear",
         "Sustain",
-        "Anti Summons",
         "Anti Illusion"
     ],
     "Tusk": [
@@ -1663,7 +1640,6 @@
         "Strength",
         "Ranged",
         "Wave Clear",
-        "Anti Summons",
         "Anti Illusion"
     ],
     "Legion Commander": [
@@ -1722,7 +1698,6 @@
         "Mobile",
         "Wisdom Steal",
         "Global Presence",
-        "Anti Summons",
         "Anti Illusion"
     ],
     "Earth Spirit": [
@@ -1834,7 +1809,6 @@
         "Wave Clear",
         "Mobile",
         "Sustain",
-        "Anti Summons",
         "Area Control"
     ],
     "Arc Warden": [
@@ -2029,8 +2003,7 @@
         "Melee",
         "Wave Clear",
         "Mobile",
-        "Anti Illusion",
-        "Anti Summons"
+        "Anti Illusion"
     ],
     "Muerta": [
         "Safelane",
