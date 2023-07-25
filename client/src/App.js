@@ -25,7 +25,7 @@ function App() {
   	return (
     	<div className="App">
 			<div id="side-bar">
-				<h1>DotAI: Dota Drafter</h1>
+				<h1>DotAI <span>Dota Drafter</span></h1>
 				<ul>
 					<li><button>About</button></li>
 					<li><button>Contact</button></li>

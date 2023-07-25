@@ -25,9 +25,13 @@ $bgWidth: 10000px;
         backdrop-filter: blur(5.7px);
         border-right: 1px solid rgba(255, 255, 255, 0.3);
         h1 {
-            line-height: 30px;
-            font-size: 1.8rem;
+            line-height: 22px;
+            font-size: 2.3rem;
             text-align: center;
+            span {
+                display: block;
+                font-size: .9rem;
+            }
         }
         ul {
             display: flex;
@@ -35,11 +39,11 @@ $bgWidth: 10000px;
             align-items: center;
             justify-content: center;
             width: 100%;
-            gap: 20px;
+            gap: 18px;
             li { 
                 button {
                     height: 40px;
-                    width: 120px;
+                    width: 150px;
                     background-color: transparent;
                     border: 2px solid rgba(white, 0.1);
                     &:hover {
