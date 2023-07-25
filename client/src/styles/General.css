@@ -9,6 +9,7 @@
     transition: .3s ease-in-out;
     color: var(--white);
     list-style: none;
+    user-select: none;
 }
 html,body,#root,.App {
     height: 100%;
