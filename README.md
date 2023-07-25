@@ -29,13 +29,6 @@ Categories I'm currently reviewing for deployment:
 - Rampage (Heroes that solo rampage (under the proper circumstances))
 - Complexity (Varying levels of hero complexity)
 
-Features I plan to implement in the future:
-- [ ] Indicate number of heroes matching in a specific category
-- [ ] Hero sorter, sort heroes by name/attribute/etc...
-- [ ] Contact form, for suggestions and inquiries.
-- [ ] Banner, display banner with basic information of first appearing in grid.
-- [ ] AI.
-
 ## Technologies and Libraries Used
 - MongoDB
 - Express
@@ -56,7 +49,7 @@ This project has been a great way for me to practice the MERN Stack:
 - Implementing responsive design principles (React + Sass).
 - Managing state and side effects using hooks (React).
 - Animating on the DOM's dynamically renderred elements (Framer Motion).
-- Creating backend (Node.js + Express) APIs.
+- Creating backend (Node.js + Express) REST APIs.
 - Retrieving data from (OpenDota) APIs.
 - Using env varaibles for sensitive data (dotenv).
 - Creating Schemas and Models (MongoDB).
