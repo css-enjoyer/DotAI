@@ -177,6 +177,9 @@ $bgWidth: 10000px;
                         box-shadow: inset 0px 5px 5px rgba(28, 28, 28, 0.5);
                         transform: translateY(-3px);
                         color: white;
+                        .icon {
+                            top: 60%;
+                        }
                     }
                     .icon {
                         position: absolute;
@@ -193,6 +196,10 @@ $bgWidth: 10000px;
                     background-color: rgba(white, 0.1);
                     border: 2px solid rgba(white, 0.5);
                     color: white;
+                    .icon {
+                        top: 60%;
+                        transform: rotate(180deg);
+                    }
                 }
                 &:hover {
                     li { opacity: 70%; }

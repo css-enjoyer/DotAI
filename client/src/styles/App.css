@@ -187,6 +187,9 @@
   transform: translateY(-3px);
   color: white;
 }
+.App #category-bar .categories div p:hover .icon {
+  top: 60%;
+}
 .App #category-bar .categories div p .icon {
   position: absolute;
   left: 10px;
@@ -201,6 +204,10 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: white;
+}
+.App #category-bar .categories div .active .icon {
+  top: 60%;
+  transform: rotate(180deg);
 }
 .App #category-bar .categories div:hover li {
   opacity: 70%;

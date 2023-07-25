@@ -7,8 +7,8 @@ function Categories({ onCategoryClick, selectedCategories }) {
     const categoryList = [
         { title: 'LANING', categories: ['Safelane', 'Midlane', 'Offlane', 'Soft Support', 'Hard Support', 'Roamer', 'Baby Sitter', 'Lane Sustainer', 'Lane Dominator', 'Early Jungler','Solo Offlaner'] },
         { title: 'TEAMFIGHT', categories: ['Initiator', 'Nuker', 'Disabler', 'Escape', 'Dispel', 'BKB Disabler', 'Anti Escape', 'Instant Lockdown', 'Saver', 'Burn Damage', 'Crowd Control', 'Highground Defense', 'Highground Offense', 'Support Killer', 'Tank Killer'] },
-        { title: 'ATTRIBUTES', categories: ['Intelligence', 'Strength', 'Agility', 'Universal', 'Anti Intelligence', 'Anti Strength', 'Anti Agility', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Ranged', 'Melee'] },
-        { title: 'GENERAL', categories: ['Split Push', 'Wave Clear', 'Mobile', 'Sustain', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Roshan', 'Global Presence', 'Wisdom Steal', 'Anti Burst', 'Anti Illusion', 'Area Vision', 'Area Control'] },
+        { title: 'ATTRIBUTES', categories: ['Intelligence', 'Strength', 'Agility', 'Universal', 'Melee', 'Ranged', 'Anti Melee', 'Anti Ranged', 'Anti Physical', 'Anti Magic', 'Anti Intelligence', 'Anti Strength', 'Anti Agility'] },
+        { title: 'GENERAL', categories: ['Mobile', 'Wave Clear', 'Split Push', 'Sustain', 'Roshan', 'Global Presence', 'Wisdom Steal', 'Area Vision', 'Area Control', 'Anti Mana', 'Anti Push', 'Anti Heal', 'Anti Burst', 'Anti Illusion'] },
     ];
 
     const [openItems, setOpenItems] = useState([]);
