@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Rubik:wght@300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Rubik:wght@300;400;500&display=swap');
 
 $bgWidth: 10000px;
 @keyframes bg {
@@ -138,7 +138,7 @@ $bgWidth: 10000px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 6px;
+                gap: 14px;
                 p {
                     width: 100%;
                     height: auto;
@@ -167,12 +167,13 @@ $bgWidth: 10000px;
                 }
                 li { 
                     width: 80%;
-                    font-size: 1.1rem;
+                    line-height: 14px;
+                    font-size: .9rem;
                     cursor: pointer; 
                     text-align: center;
                     transition: .1s ease-in-out;
                     &:hover {
-                        transform: scale(1.4);
+                        transform: scale(1.4) !important;
                         text-shadow: 0px 3px 3px rgb(36, 36, 36);
                         opacity: 100%;
                         color: white;
