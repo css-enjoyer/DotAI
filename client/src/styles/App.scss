@@ -25,10 +25,11 @@ $bgWidth: 10000px;
         backdrop-filter: blur(5.7px);
         border-right: 1px solid rgba(255, 255, 255, 0.3);
         h1 {
-            line-height: 22px;
+            line-height: 30px;
             font-size: 2.3rem;
             text-align: center;
             span {
+                line-height: 15px;
                 display: block;
                 font-size: .9rem;
             }
@@ -258,20 +259,16 @@ $bgWidth: 10000px;
             grid-area: nav;
             width: 100%;
             padding: 10px 30px;
-            div {
-                width: 100%;
-                font-size: .8rem;
-                .header {
-                    font-size: 2rem;
-                }
-                p { 
-                    font-size: .8rem; 
-                    line-height: 12px; 
-                    text-align: center;
-                    margin-bottom: 2px;
+            flex-direction: row;
+            ul {
+                flex-direction: row;
+                justify-content: flex-end;
+                li { 
+                    button {
+                        width: 100px;
+                    }
                 }
             }
-            #nav { flex-direction: row; }
         }
         #main {
             width: auto;
