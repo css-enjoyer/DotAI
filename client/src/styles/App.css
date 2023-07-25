@@ -45,6 +45,7 @@
 }
 .App #main #hero-list {
   width: 100%;
+  min-height: auto;
   padding: 20px 10px;
   display: flex;
   justify-content: center;
@@ -112,12 +113,15 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 .App #main .foot-note p {
   line-height: 13px;
   font-size: 0.85rem;
   font-family: "Kanit";
   opacity: 80%;
+  text-align: center;
 }
 .App #category-bar {
   min-width: 180px;
