@@ -173,10 +173,11 @@
         "Ranged",
         "Wave Clear",
         "Mobile"],
-    "Sandking": [
+    "Sand King": [
         "Offlane",
         "Lane Sustainer",
         "Initiator",
+        "Disabler",
         "Nuker",
         "Escape",
         "Instant Lockdown",
@@ -1317,6 +1318,7 @@
         "Wave Clear"
     ],
     "Undying": [
+        "Soft Support",
         "Hard Support",
         "Baby Sitter",
         "Lane Dominator",
@@ -1774,6 +1776,7 @@
     ],
     "Oracle": [
         "Soft Support",
+        "Hard Support",
         "Baby Sitter",
         "Nuker",
         "Dispel",
