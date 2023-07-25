@@ -1,4 +1,3 @@
-
 function Hero({image, name, className}) {
 	
 	const openHeroPage = () => {
@@ -11,7 +10,8 @@ function Hero({image, name, className}) {
 	}
 
   	return (
-		<div className={`Hero ${className}`} onClick={openHeroPage}>
+		<div
+		className={`Hero ${className}`} onClick={openHeroPage}>
 			<img src={image} alt={name} id="hero-img"></img>
 			<p>{name}</p>
 		</div>

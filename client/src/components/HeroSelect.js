@@ -43,15 +43,15 @@ function HeroSelect({ selectedCategories }) {
 			) : (
 				// HeroSelect content
 				<AnimatePresence>
-					{filteredHeroes.map(hero => (
-						<motion.div className="hero-wrapper"
-							initial={{ opacity: 0 }}
-							animate={{ scale: 1, opacity: 1 }}
-							exit={{ scale: 0, opacity: 0 }}
-							key={hero._id}>
-							<Hero name={hero.name} image={getHeroImageURL(hero.img)} />
-						</motion.div>
-					))}
+				{filteredHeroes.map(hero => (
+					<motion.div className="hero-wrapper"
+						initial={{ opacity: 0 }}
+						animate={{ scale: 1, opacity: 1 }}
+						exit={{ scale: 0, opacity: 0 }}
+						key={hero._id}>
+						<Hero name={hero.name} image={getHeroImageURL(hero.img)} />
+					</motion.div>
+				))}
 				</AnimatePresence>
 			)}
 		</div>

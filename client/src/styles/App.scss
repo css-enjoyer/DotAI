@@ -200,6 +200,7 @@ $bgWidth: 10000px;
         }
     }
     #category-display {
+        pointer-events: none;
         min-width: 200px;
         width: 50vw;
         height: 100px;
