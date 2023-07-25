@@ -29,6 +29,27 @@ $bgWidth: 10000px;
             font-size: 1.8rem;
             text-align: center;
         }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+            li { 
+                button {
+                    height: 40px;
+                    width: 120px;
+                    background-color: transparent;
+                    border: 2px solid rgba(white, 0.1);
+                    &:hover {
+                        box-shadow: inset 0px 5px 5px rgba(28, 28, 28, 0.5);
+                        transform: translateY(-3px);
+                        color: white;
+                    }
+                }
+            }
+        }
     }
     #main {
         width: 100%;
