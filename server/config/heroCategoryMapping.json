@@ -56,7 +56,7 @@
         "Agility",
         "Anti Melee",
         "Ranged"],
-    "Earth Shaker": [
+    "Earthshaker": [
         "Soft Support",
         "Roamer",
         "Initiator",
@@ -145,6 +145,7 @@
         "Wisdom Steal"],
     "Pudge": [
         "Offlane",
+        "Soft Support",
         "Roamer",
         "Disabler",
         "BKB Disabler",
@@ -1712,7 +1713,6 @@
         "Burn Damage",
         "Crowd Control",
         "Support Killer",
-        "Earth Spirit",
         "Melee",
         "Wave Clear",
         "Mobile",
