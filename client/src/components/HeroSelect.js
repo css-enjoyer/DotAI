@@ -5,14 +5,18 @@ import { motion, AnimatePresence } from "framer-motion"
 function HeroSelect({ selectedCategories }) {
 	
 	const [heroes, setHeroes] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
 	useEffect(() => {
 		fetch('https://dotai.onrender.com/heroes')
 		.then(response => response.json())
 		.then(data => { 
 			setHeroes(data);
+			setIsLoading(false);
 			console.log("Heroes successfully retrieved from the database");
 		})
 		.catch(error => {
+			setIsLoading(false);
 			console.error(error);
 		});
 	}, []);
@@ -30,19 +34,29 @@ function HeroSelect({ selectedCategories }) {
 
 	return (
 		<div id="hero-list">
-			<AnimatePresence>
-				{filteredHeroes.map(hero => (
-					<motion.div className="hero-wrapper"
-					initial={{ opacity: 0 }}
-					animate={{ scale: 1, opacity: 1 }}
-					exit={{ scale: 0, opacity: 0 }}
-					key={hero._id}>
-						<Hero name={hero.name} image={getHeroImageURL(hero.img)}/>
-					</motion.div>
-				))}
-			</AnimatePresence>
+			{isLoading ? (
+				// Loading screen
+				<div className="loading-screen">
+					<h1>Loading...</h1>
+					<div class="lds-facebook"><div></div><div></div><div></div></div>
+				</div>
+			) : (
+				// HeroSelect content
+				<AnimatePresence>
+					{filteredHeroes.map(hero => (
+						<motion.div className="hero-wrapper"
+							initial={{ opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							exit={{ scale: 0, opacity: 0 }}
+							key={hero._id}>
+							<Hero name={hero.name} image={getHeroImageURL(hero.img)} />
+						</motion.div>
+					))}
+				</AnimatePresence>
+			)}
 		</div>
-	);
+	  );
+	  
 }
 
 export default HeroSelect;

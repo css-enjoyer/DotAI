@@ -31,7 +31,6 @@ $bgWidth: 10000px;
             font-size: 1.8rem;
             text-align: center;
         }
-        
         #nav {
             display: flex;
             align-items: center;
@@ -58,13 +57,17 @@ $bgWidth: 10000px;
         overflow-y: scroll;
         overflow-x: hidden;
         #hero-list {
+            position: relative;
             width: 100%;
+            height: 100%;
             padding: 20px 10px;
             display: flex;
             justify-content: center;
+            align-content: flex-start;
             flex-wrap: wrap;
             gap: 12px;
             .hero-wrapper {
+                height: fit-content;
                 flex: 0 1 120px;
                 .Hero {
                     display: flex;
