@@ -26,9 +26,16 @@ function App() {
     	<div className="App">
 			<div id="side-bar">
 				<h1>DotAI: Dota Drafter</h1>
+				<ul>
+					<li><button>Contact</button></li>
+				</ul>
 			</div>
 			<div id="main">
 				<HeroSelect selectedCategories={selectedCategories}/>
+				<div className="foot-note">
+					<p className="disclaimer">This site is not affiliated with Valve Corporation</p>
+					<p className="copyright">© 2023 DotAI</p>
+				</div>
 			</div>
 			<div id="category-bar">
 				<Categories selectedCategories={selectedCategories} onCategoryClick={handleCategoryClick}/>
