@@ -27,20 +27,27 @@ function App() {
 	const [isAboutOpen, setIsAboutOpen] = useState(false);
 	const handleAboutClick = () => {
 		setIsAboutOpen(!isAboutOpen);
+		setIsContactOpen(false); // Close Contact
 	};
 
-	  
+	const [isContactOpen, setIsContactOpen] = useState(false);
+	const handleContactClick = () => {
+		setIsContactOpen(!isContactOpen);
+		setIsAboutOpen(false); // Close About
+	};
+
   	return (
     	<div className="App">
 			<div id="side-bar">
 				<h1>DotAI <span>Dota Drafter</span></h1>
 				<ul>
 					<li><button onClick={handleAboutClick}>About</button></li>
-					<li><button>Contact</button></li>
+					<li><button onClick={handleContactClick}>Contact</button></li>
 				</ul>
 			</div>
 			<div id="main">
 				{isAboutOpen && <About />}
+				{isContactOpen && <Contact />}
 				<HeroSelect selectedCategories={selectedCategories}/>
 				<div className="foot-note">
 					<p className="disclaimer">This site is not affiliated with Valve Corporation</p>

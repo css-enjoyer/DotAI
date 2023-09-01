@@ -148,18 +148,40 @@
   opacity: 80%;
   text-align: center;
 }
-.App #main #about {
+.App #main #about, .App #main #contact {
   position: fixed;
   z-index: 999;
   width: 50%;
   height: 50%;
   top: 25%;
   left: 25%;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.App #main #about .head, .App #main #contact .head {
+  font-size: 0.9rem;
+}
+.App #main #about .body, .App #main #contact .body {
+  text-align: justify;
+  font-size: 0.75rem;
+}
+.App #main #contact {
+  gap: 20px;
+}
+.App #main #contact .body {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
 }
 .App #category-bar {
   min-width: 180px;
