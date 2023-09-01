@@ -147,7 +147,7 @@ $bgWidth: 10000px;
             position: fixed;
             z-index: 999;
             width: 50%; 
-            height: 50%; 
+            height: auto; 
             top: 25%; 
             left: 25%; 
             background-color: rgba(0, 0, 0, 0.65);
@@ -334,6 +334,11 @@ $bgWidth: 10000px;
                     min-width: 100px; 
                 }
             }
+            #about, #contact {
+                top: 10%;
+                left: 15%;
+                width: 70%;
+            }
         }
         #category-bar {
             grid-area: categories;
@@ -363,14 +368,23 @@ $bgWidth: 10000px;
     }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 390px) {
     .App {
-        // #side-bar {}
         #main {
             #hero-list {
                 gap: 5px;
             }
+            #about,#contact {
+                .body {
+                    font-size: 0.6rem;
+                }
+            }
+            #about {
+                .body {
+                    text-align: left;
+                }
+            }
+
         }
-        // #category-bar {}
     }
 }

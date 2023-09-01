@@ -152,7 +152,7 @@
   position: fixed;
   z-index: 999;
   width: 50%;
-  height: 50%;
+  height: auto;
   top: 25%;
   left: 25%;
   background-color: rgba(0, 0, 0, 0.65);
@@ -339,6 +339,11 @@
     flex: 0 1 90px;
     min-width: 100px;
   }
+  .App #main #about, .App #main #contact {
+    top: 10%;
+    left: 15%;
+    width: 70%;
+  }
   .App #category-bar {
     grid-area: categories;
     width: 100%;
@@ -364,8 +369,14 @@
     left: 0;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 390px) {
   .App #main #hero-list {
     gap: 5px;
+  }
+  .App #main #about .body, .App #main #contact .body {
+    font-size: 0.6rem;
+  }
+  .App #main #about .body {
+    text-align: left;
   }
 }/*# sourceMappingURL=App.css.map */
