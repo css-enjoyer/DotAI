@@ -29,7 +29,7 @@ app.get("/heroes", async (req, res) => {
         res.json(heroes);
         console.log("Heroes endpoint successful"); 
     } catch (error) {
-        console.error("Error retrieving heroes:", error);
+        console.error("Error retrieving heroes:", error); 
         res.status(500).json({ error: "Something went wrong" });
     }
 });
