@@ -1,6 +1,8 @@
 # DotAI
 DotAI is an application that provides an easy way to filter the hundreds of heroes from Dota 2. It offers a user-friendly interface to quickly categorize heroes by their main strengths.
 
+Link to the [DotAI Webapp](https://dotaidraft.netlify.app/).
+
 
 ## Usage
 Simply select from the list of categories and corresponding heroes will show up. Keep in mind that DotAI's strength is the ability to mix and match from various categories.
