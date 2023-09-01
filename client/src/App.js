@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 
 import './styles/App.css';
 import './styles/General.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
 
@@ -46,8 +47,24 @@ function App() {
 				</ul>
 			</div>
 			<div id="main">
-				{isAboutOpen && <About />}
-				{isContactOpen && <Contact />}
+			<AnimatePresence>
+				{isAboutOpen && (
+					<motion.div
+						initial={{ opacity: 0, zIndex: 99 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						key="about">
+						<About />
+					</motion.div> )}
+				{isContactOpen && (
+					<motion.div
+						initial={{ opacity: 0, zIndex: 999 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						key="contact">
+						<Contact />
+					</motion.div>)}
+				</AnimatePresence>
 				<HeroSelect selectedCategories={selectedCategories}/>
 				<div className="foot-note">
 					<p className="disclaimer">This site is not affiliated with Valve Corporation</p>
