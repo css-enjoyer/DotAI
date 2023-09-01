@@ -2,9 +2,9 @@
 function Contact() {
 
     return (
-      <div className="Contact">
-          
-      </div>
+        <div id="contact">
+            
+        </div>
     );
 }
 export default Contact;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import HeroSelect from './components/HeroSelect';
 import Categories from './components/Categories';
+import About from './components/About';
+import Contact from './components/Contact';
 
 import './styles/App.css';
 import './styles/General.css';
@@ -21,17 +23,24 @@ function App() {
         }
 		console.log(selectedCategories);
     };
+
+	const [isAboutOpen, setIsAboutOpen] = useState(false);
+	const handleAboutClick = () => {
+		setIsAboutOpen(!isAboutOpen);
+	};
+
 	  
   	return (
     	<div className="App">
 			<div id="side-bar">
 				<h1>DotAI <span>Dota Drafter</span></h1>
 				<ul>
-					<li><button>About</button></li>
+					<li><button onClick={handleAboutClick}>About</button></li>
 					<li><button>Contact</button></li>
 				</ul>
 			</div>
 			<div id="main">
+				{isAboutOpen && <About />}
 				<HeroSelect selectedCategories={selectedCategories}/>
 				<div className="foot-note">
 					<p className="disclaimer">This site is not affiliated with Valve Corporation</p>
