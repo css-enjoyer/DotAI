@@ -39,6 +39,7 @@ function HeroSelect({ selectedCategories }) {
 				// Loading screen
 				<div className="loading-screen">
 					<h1>Loading...</h1>
+					<p>Long load times are due to inactivity restrictions placed by the Server Host. Thank you for your patience.</p>
 					<div class="lds-facebook"><div></div><div></div><div></div></div>
 				</div>
 			) : (
