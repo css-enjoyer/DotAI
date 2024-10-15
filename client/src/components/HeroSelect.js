@@ -21,7 +21,8 @@ function HeroSelect({ selectedCategories }) {
 		});
 	}, []);
 	const getHeroImageURL = (image) => {
-		const baseURL = 'https://api.opendota.com';
+		// const baseURL = 'https://api.opendota.com';
+		const baseURL = 'https://cdn.cloudflare.steamstatic.com/'; // api changed base url
 		return `${baseURL}${image}`;
 	};
 
