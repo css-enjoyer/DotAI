@@ -3,22 +3,22 @@ import Hero from './Hero';
 import { motion, AnimatePresence } from "framer-motion"
 
 function HeroSelect({ selectedCategories }) {
-	
+
 	const [heroes, setHeroes] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		fetch('https://dotai.onrender.com/heroes')
-		.then(response => response.json())
-		.then(data => { 
-			setHeroes(data);
-			setIsLoading(false);
-			console.log("Heroes successfully retrieved from the database");
-		})
-		.catch(error => {
-			setIsLoading(false);
-			console.error(error);
-		});
+			.then(response => response.json())
+			.then(data => {
+				setHeroes(data);
+				setIsLoading(false);
+				console.log("Heroes successfully retrieved from the database");
+			})
+			.catch(error => {
+				setIsLoading(false);
+				console.error(error);
+			});
 	}, []);
 	const getHeroImageURL = (image) => {
 		// const baseURL = 'https://api.opendota.com';
@@ -31,7 +31,7 @@ function HeroSelect({ selectedCategories }) {
 		filteredHeroes = heroes.filter(hero => {
 			return selectedCategories.every(category => hero.categories.includes(category));
 		});
-	} 
+	}
 
 	return (
 		<div id="hero-list">
@@ -39,26 +39,26 @@ function HeroSelect({ selectedCategories }) {
 				// Loading screen
 				<div className="loading-screen">
 					<h1>Loading...</h1>
-					<p>Long load times are due to inactivity restrictions placed by the Server Host. Thank you for your patience.</p>
+					<p className="loading-desc">Long load times are due to inactivity restrictions placed by the Server Host. Thank you for your patience.</p>
 					<div class="lds-facebook"><div></div><div></div><div></div></div>
 				</div>
 			) : (
 				// HeroSelect content
 				<AnimatePresence>
-				{filteredHeroes.map(hero => (
-					<motion.div className="hero-wrapper"
-						initial={{ opacity: 0 }}
-						animate={{ scale: 1, opacity: 1 }}
-						exit={{ scale: 0, opacity: 0 }}
-						key={hero._id}>
-						<Hero name={hero.name} image={getHeroImageURL(hero.img)} />
-					</motion.div>
-				))}
+					{filteredHeroes.map(hero => (
+						<motion.div className="hero-wrapper"
+							initial={{ opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							exit={{ scale: 0, opacity: 0 }}
+							key={hero._id}>
+							<Hero name={hero.name} image={getHeroImageURL(hero.img)} />
+						</motion.div>
+					))}
 				</AnimatePresence>
 			)}
 		</div>
-	  );
-	  
+	);
+
 }
 
 export default HeroSelect;

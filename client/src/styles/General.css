@@ -48,6 +48,10 @@ button { cursor: pointer; }
     align-items: center;
     justify-content: center;
 }
+.loading-desc {
+    padding: 0 50px;
+    text-align: center;
+}
 .loading-screen h1 {
     font-size: 2.5rem;
 }
